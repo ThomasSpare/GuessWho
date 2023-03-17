@@ -1,0 +1,21 @@
+body{background: rgb(34,193,195);
+     background: linear-gradient(0deg,
+     rgba(34,193,195,1) 0%,
+     rgba(253,187,45,1) 100%);
+     min-height: 100vh}
+.updiv{height: 0vw;}
+.parent{display: flex;
+        position: relative;
+        height: 100vh;
+        width: 100vw;}
+.child{ border: 20px;
+        border-color:  hwb(56 0% 38%);
+        border-style:ridge;
+        border-radius: 30px;
+        width: 30%;
+        height: 30%;
+        margin: auto;
+        background-color: hwb(56 0% 7%);
+        padding: 10%;
+    }
+
