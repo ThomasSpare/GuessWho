@@ -14,15 +14,17 @@ footer{height: 120px;
 .updiv{height: 0vw;
 }
 .lowdiv{height: 330px;
-        margin-bottom:  0px;
-        background-image:url("assets/images/graphics/bord transp.png");       
+        background-color: bisque;
+        margin-bottom:  20px;
+        background-image: url("assets/images/graphics/bord transp.png");       
 }
 .parent{display: flex;
         position: relative;
         height:60vh;
         width: 100vw;
 }
-.child{ border: 20px;
+.child{ 
+        border: 20px;
         border-color:  hwb(56 0% 38%);
         border-style:ridge;
         border-radius: 30px;
@@ -33,9 +35,7 @@ footer{height: 120px;
         background-color: hwb(51 0% 9%);
         padding: 0;
     }
-.first_row{height:30px; 
-        width: max-content; 
-        background-color: rgb(204, 167, 238);
+.first_row{background-color:  rgb(252, 213, 85);
 }
 .second_row{background-color: rgb(247, 113, 72);
 }
@@ -51,9 +51,29 @@ footer{height: 120px;
         border-color:  hwb(17 0% 38%);
         border-style:ridge;
         border-radius: 0px}
-.user.question.form{width: fit-content; 
+.user_question_form{margin-left: 55%;
+        margin-top: -150px;
+        height: 150px;    
 }
+.opp_13{height: 170px;
+        margin-top: 450px;
+        margin-left: 15%; border: 5px;
+        border-color:  hwb(17 0% 38%);
+        border-style:ridge;
+        border-radius: 0px;
+}
+button{padding: 10px;
+        width: 70px;
 
+        background-color: hwb(51 0% 9%);
+
+        }
+aside{
+        width: 30%;
+        padding-left: 15px;
+        margin-left: 15px;
+        float: right;
+      }
         @media screen {
                 
         }
