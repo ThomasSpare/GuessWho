@@ -33,7 +33,9 @@ footer{height: 120px;
         background-color: hwb(51 0% 9%);
         padding: 0;
     }
-.first_row{height:30px: width:fit-content rgb(204, 167, 238);
+.first_row{height:30px; 
+        width: max-content; 
+        background-color: rgb(204, 167, 238);
 }
 .second_row{background-color: rgb(247, 113, 72);
 }
@@ -49,6 +51,8 @@ footer{height: 120px;
         border-color:  hwb(17 0% 38%);
         border-style:ridge;
         border-radius: 0px}
+.user.question.form{width: fit-content; 
+}
 
         @media screen {
                 
