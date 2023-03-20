@@ -6,12 +6,14 @@ body{background: rgb(34,193,195);
      min-width: 100vw; 
 }
 footer{height: 120px;
+        min-width: 100vw;
         margin-top: 8vh;
         bottom: 0px; 
         background-color:  rgb(32, 23, 10);
         position:static;
 }
 header{text-align: center;
+        min-width: 100vw;
         height:100px;
         margin-top: 0px;
         background: rgb(34,193,195);
@@ -19,11 +21,18 @@ header{text-align: center;
         rgba(34,193,195,1) 0%,
         rgba(253,187,45,1) 100%)}
 .updiv{height: 0vw;
+        align-items: center;
 }
 .lowdiv{
         height: 330px;
         margin-bottom:  20px;
 }
+.play_game{display:flex; 
+        height: 20px;
+        justify-content: center;}
+.btn--main::after{                              /* button trigger pseudo after */
+        content:attr(data-type); 
+}       
 .parent{display: flex;
         position: relative;
         height:60vh;
