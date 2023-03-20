@@ -30,7 +30,7 @@ header{text-align: center;
 .play_game{display:flex; 
         height: 20px;
         justify-content: center;}
-.btn--main::after{                              /* button trigger pseudo after */
+.button::after{                              /* button trigger pseudo after */
         content:attr(data-type); 
 }       
 .parent{display: flex;
@@ -78,14 +78,14 @@ header{text-align: center;
         border-style:ridge;
         border-radius: 0px;
 }
+#newgame{height: 70px;
+        z-index: 999;
+}
 button{padding: 10px;
         align-content: space-around;
         width: 70px;
         border-radius: 5px;
-        
-
         background-color: hwb(51 0% 9%);
-
 }
 aside{
         width: 30%;
