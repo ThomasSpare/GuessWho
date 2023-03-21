@@ -1,24 +1,30 @@
-document.addEventListener("DOMContentLoaded", function (){
-  userInput = document.getElementById('userInput');
-  userInput.addEventListener('input', (e) => {
-})
-  
-    const newGameButton = document.getElementById("newgame");
-    const someString = "Username"
-    newGameButton.addEventListener(
-      "click",
-      function(){
-        sign = window.prompt("Choose a username to play");
-        if (username === ''){
-          alert('Please enter a username');
+document.addEventListener("DOMContentLoaded", function ();
+  let buttons = document.getElementsByTagName("button");
+    for (let button of buttons){
+      button.addEventListener('click', function()) 
+        if(this.getAttribute('data-type') === "New game"){
+          alert('You clicked submit!');
+        } else{
+            let gameType = this.getAttribute('data-type');
+            alert(`You clicked ${gameType}`);
         }
-        username = sign;
-        console.log(sign);
-        bind(someString);
-        this.after
-      }
-    )
-  })
+      )
+
+  //document.getElementById("newgame").addEventListener("click", enterUserName);
+
+
+
+function enterUserName(){
+  sign = window.prompt("Choose a username to play");
+  if (sign === ''){
+    alert('Please enter a username');
+console.log(sign);   // Expected value: 'Username'
+bind(someString);
+}
+}
+
+
+
 
 // people list for use in filter function, the property img is a unique identifier
 
@@ -55,21 +61,24 @@ let people =[ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', img: 'a
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', img: 'assets/images/characters/30 girl nohappy blond longhair.jpg'},
             ]
 
+
+            function getRandomInt(max) {
+              return Math.floor(Math.random() * max);
+            }          
             
 
 
 
 let randomImg = 0;
-  for (let i = 0; i < 13; i++){                             // incomplete randomizer function that returns 13 digits between 0 - 29
+  for (let i = 0; i < 13; i++){  }                           // incomplete randomizer function that returns 13 digits between 0 - 29
   
-  function getRandomInt(0, 12) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-  let imgnr = return;
-  if imgnr.length =   
-}
-}
+  function getRandomInt(min, max) {
+    min = Math.ceil(1);
+    max = Math.floor(13);
+    return Math.floor(Math.random() * (min - max) + min);
+    console.log();                                                              // if imgnr.length =  
+  }
+
 
 
 

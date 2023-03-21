@@ -29,10 +29,8 @@ header{text-align: center;
 }
 .play_game{display:flex; 
         height: 20px;
-        justify-content: center;}
-.button::after{                              /* button trigger pseudo after */
-        content:attr(data-type); 
-}       
+        justify-content: center;
+}
 .parent{display: flex;
         position: relative;
         height:60vh;
