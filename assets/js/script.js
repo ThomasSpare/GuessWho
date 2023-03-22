@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (){
   document.getElementById("newgamebtn").addEventListener("click", enterUserName, getRandomInt);
+ getElementsByName(slotorder).addEventListener("messaging", renderImages);
   });
   // document.getElementById("newgame").addEventListener("click", enterUserName);
 
@@ -9,12 +10,61 @@ function enterUserName(){
   if (userName === ""){
     alert('Please enter a username');
   } 
-  else console.log("Lets play",userName);
+  else console.log("Lets play", userName);
   document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
   document.getElementById("instructions").innerHTML = 
   "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK";
+  let peoplestring = new Array(people);
+  console.log(peoplestring);
+  let slots = document.getElementsByClassName("slot");
+let slotorder = new Array(slots)
+console.log(slotorder); 
 
 }
+
+
+
+
+function renderImages()                                        
+for (let images = document.createElement('img'));
+images.appendChild('img');
+
+
+
+
+
+
+
+  // let peoplestring = (people.getRandomInt);
+  // console.log(peoplestring[3]);
+
+
+  // document.getElementById("slot").
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // people list for use in filter function, the property img is a unique identifier
 
 
@@ -57,28 +107,15 @@ function getRandomInt(min, max) {
    max = Math.floor(13);
    return Math.floor(Math.random() * (1 - 13) + 1);                                                 
    }
-   var cards = 
-   console.log(cards);
+   //var cards = 
+  // console.log(cards);
+  
 
 
 
 
 
-	// function renderImages(){                                              // This function should render images to the slots on the game board
-	//  for (let choosen of people === (choosen.length === 13))                                                                            // There has to be an element also to randomize the images that gets choosen
+	 // function renderIma(){                                              // This function should render images to the slots on the game board
+	 //  for (let choosen of people === (choosen.length === 13))                                                                            // There has to be an element also to randomize the images that gets choosen
 	 //   let images = document.createElement('img');
 	 //   images.appendChild('img');
- //       console.log(choosen)
-// }
-//
-
-
-function runGame(){
-
-}
-function checkAnswer(){
-
-}
-function removeCards(){
-
-}
