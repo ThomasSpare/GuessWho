@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 
 function enterUserName(){
-  var userName = document.getElementById("myText").value;
+  var userName = document.getElementById("myText").value;             // Username input, display instructions when press play
   if (userName === ""){
     alert('Please enter a username');
   } 
@@ -27,8 +27,28 @@ console.log(slotorder);
 //let count = 0
 //do {count = count + 1;
   function checkPeopleFeatures(){
-  let feature = document.querySelector('input[name="user_ask_feature"]:checked')
-  console.log(feature);}
+  let feature = document.querySelector('input[name="user_ask_feature"]:checked')            // Checks choice of Radio buttons when user press ASK
+     
+  document.getElementById("lets play").innerHTML = "You asked if X - " + feature.id;        // Prints out the users Choice           
+  console.log(feature.value); 
+}
+// let (feature.value)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //} while (count < 5)
 
 
