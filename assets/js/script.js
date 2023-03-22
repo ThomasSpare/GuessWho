@@ -1,31 +1,20 @@
-document.addEventListener("DOMContentLoaded", function ();
-  let buttons = document.getElementsByTagName("button");
-    for (let button of buttons){
-      button.addEventListener('click', function()) 
-        if(this.getAttribute('data-type') === "New game"){
-          alert('You clicked submit!');
-        } else{
-            let gameType = this.getAttribute('data-type');
-            alert(`You clicked ${gameType}`);
-        }
-      )
-
-  //document.getElementById("newgame").addEventListener("click", enterUserName);
-
+document.addEventListener("DOMContentLoaded", function (){
+  document.getElementById("newgamebtn").addEventListener("click", enterUserName, getRandomInt);
+  });
+  // document.getElementById("newgame").addEventListener("click", enterUserName);
 
 
 function enterUserName(){
-  sign = window.prompt("Choose a username to play");
-  if (sign === ''){
+  var userName = document.getElementById("myText").value;
+  if (userName === ""){
     alert('Please enter a username');
-console.log(sign);   // Expected value: 'Username'
-bind(someString);
+  } 
+  else console.log("Lets play",userName);
+  document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
+  document.getElementById("instructions").innerHTML = 
+  "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK";
+
 }
-}
-
-
-
-
 // people list for use in filter function, the property img is a unique identifier
 
 
@@ -60,37 +49,28 @@ let people =[ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', img: 'a
               {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'happy', img: 'assets/images/characters/29 girl brunette happy longhair.jpg'},
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', img: 'assets/images/characters/30 girl nohappy blond longhair.jpg'},
             ]
-
-
-            function getRandomInt(max) {
-              return Math.floor(Math.random() * max);
-            }          
-            
-
-
-
-let randomImg = 0;
-  for (let i = 0; i < 13; i++){  }                           // incomplete randomizer function that returns 13 digits between 0 - 29
+//  let randomImg = 0;
+ // for (let i = 0; i < 13; i++){  }                           // incomplete randomizer function that returns 13 digits between 0 - 29
   
-  function getRandomInt(min, max) {
-    min = Math.ceil(1);
-    max = Math.floor(13);
-    return Math.floor(Math.random() * (min - max) + min);
-    console.log();                                                              // if imgnr.length =  
-  }
+function getRandomInt(min, max) {
+   min = Math.ceil(1);
+   max = Math.floor(13);
+   return Math.floor(Math.random() * (1 - 13) + 1);                                                 
+   }
+   var cards = 
+   console.log(cards);
 
 
 
 
 
-13	function renderImages(){                                              // This function should render images to the slots on the game board
-14	  for ( let choosen of people === (choosen.length === 13,   
-  )) {                                                                            // There has to be an element also to randomize the images that gets choosen
-15	    let images = document.createElement(img);
-16	    images.appendChild(img);
-console.log(choosen)
-17	  }
-18	}
+	// function renderImages(){                                              // This function should render images to the slots on the game board
+	//  for (let choosen of people === (choosen.length === 13))                                                                            // There has to be an element also to randomize the images that gets choosen
+	 //   let images = document.createElement('img');
+	 //   images.appendChild('img');
+ //       console.log(choosen)
+// }
+//
 
 
 function runGame(){

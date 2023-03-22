@@ -29,7 +29,8 @@ header{text-align: center;
 }
 .play_game{display:flex; 
         height: 20px;
-        justify-content: center;
+        justify-content: center
+        ;
 }
 .parent{display: flex;
         position: relative;

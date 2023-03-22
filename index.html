@@ -14,8 +14,12 @@
          <h1>The 'X' behind the card</h1>
       </header>
        <div class="play_game">   
-         <button class="Newgame" id="newgame" data-type="New Game">NEW GAME</button>
-       </div class="updiv">
+       <label>Enter username to play</label><br>
+         <input type="text" id="myText"><br>
+         <button type="submit" id="newgamebtn">PLAY</button><br>
+         <br>
+         <h1 id="lets play"></h1><br>
+         <p id="instructions"></p>
          <img class="opp_13" id="opp_13" src="assets/images/characters/16 man blondhair happy shorthair.jpg" alt="26 man blondhair longhair happy">
        </div>
             <div class="parent">
@@ -29,7 +33,7 @@
                   
                      <span>
                         <section class="user_question_form">
-                           <h2>Ask and get clues <button data-type="question" id="button" inputmode="submit" value="user_ask">ASK?</button> </h2>    <!-- Submit button & Input alt for user Questions-->
+                           <h2>Ask and get clues <button data-type="question" id="ask" inputmode="submit" value="user_ask">ASK?</button> </h2>    <!-- Submit button & Input alt for user Questions-->
                            <input type="radio" id="woman" name="user_ask_feature" value="woman">
                            <label for="html">A Woman?</label>
                            <input type="radio" id="man" name="user_ask_feature" value="man">
@@ -73,11 +77,11 @@
                                     <img class="slot" id="12" src="assets/images/characters/12 girl angry redhair longhair.jpg" alt="blond angry man">
                                     <aside>
                                     <h2>Answer Opponent</h2>
-                                    <button data-type="answer yes" id="button" inputmode="submit" value="user_answer_YES">YES</button>               <!-- YES or NO buttons -->
-                                    <button data-type="answer no" id="button" inputmode="submit" value="user_answer_NO">NO</button>
+                                    <button data-type="answer yes" id="yes" inputmode="submit" value="user_answer_YES">YES</button>               <!-- YES or NO buttons -->
+                                    <button data-type="answer no" id="no" inputmode="submit" value="user_answer_NO">NO</button>
                                     <br>
                                     <br>
-                                    <button data-type="guess" id="button" style="margin-left: 60%; background-color: rgb(209, 77, 105);" 
+                                    <button data-type="guess" id="guess" style="margin-left: 60%; background-color: rgb(209, 77, 105);" 
                                     value="user_guess">GUESS</button> <!-- After tapping guess button the user will be promted to click image-->
                                  
                                     </aside>
@@ -90,10 +94,7 @@
           
        <footer>
        </footer>
-         <script>
-            const images = document.getElementById('images');
-            images.innerHTML = '';
-         </script>
+       <script>document.getElementById("lets play").innerHTML = 1;</script>
        <script src="assets/js/script.js"></script>  
     </body>
 </html>
