@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (){
-  document.getElementById("newgamebtn").addEventListener("click", enterUserName, getRandomInt);
- getElementsByName(slotorder).addEventListener("messaging", renderImages);
+  document.getElementById("newgamebtn").addEventListener("click", enterUserName);
+ document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
   });
   // document.getElementById("newgame").addEventListener("click", enterUserName);
 
@@ -12,22 +12,48 @@ function enterUserName(){
   } 
   else console.log("Lets play", userName);
   document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
-  document.getElementById("instructions").innerHTML = 
+  document.getElementById("instructions").innerHTML =
   "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK";
   let peoplestring = new Array(people);
   console.log(peoplestring);
   let slots = document.getElementsByClassName("slot");
 let slotorder = new Array(slots)
-console.log(slotorder); 
-
+console.log(slotorder);
 }
 
 
 
 
-function renderImages()                                        
-for (let images = document.createElement('img'));
-images.appendChild('img');
+//let count = 0
+//do {count = count + 1;
+  function checkPeopleFeatures(){
+  let feature = document.querySelector('input[name="user_ask_feature"]:checked')
+  console.log(feature);}
+//} while (count < 5)
+
+
+
+
+
+//const foundcards = people.find((item) => {                      // function to check Input from ASK button against values in people 
+//  return item.hair === 'long'
+//})
+//console.log(foundcards);
+
+
+
+
+
+
+
+
+
+
+
+
+//function renderImages()                                        
+//for (let images = document.createElement('img'));
+//images.appendChild('img');
 
 
 
@@ -99,14 +125,22 @@ let people =[ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', img: 'a
               {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'happy', img: 'assets/images/characters/29 girl brunette happy longhair.jpg'},
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', img: 'assets/images/characters/30 girl nohappy blond longhair.jpg'},
             ]
+
+
+
+
 //  let randomImg = 0;
  // for (let i = 0; i < 13; i++){  }                           // incomplete randomizer function that returns 13 digits between 0 - 29
   
-function getRandomInt(min, max) {
-   min = Math.ceil(1);
-   max = Math.floor(13);
-   return Math.floor(Math.random() * (1 - 13) + 1);                                                 
-   }
+//do {
+  //function getRandomInt(min, max) {
+    // min = Math.ceil(1);
+     //max = Math.floor(13);
+     //return Math.floor(Math.random() * (1 - 13) + 1);
+                                                     
+    // }
+//} while ("click", document.getElementById("newgamebtn"))
+
    //var cards = 
   // console.log(cards);
   
