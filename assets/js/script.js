@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function (){
   document.getElementById("newgamebtn").addEventListener("click", enterUserName);
  document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
+ document.getElementById("ask").addEventListener("click", removePeople);
+ document.getElementById("guess").addEventListener("click", guessX);
+ 
   });
   // document.getElementById("newgame").addEventListener("click", enterUserName);
 
@@ -30,8 +33,31 @@ console.log(slotorder);
   let feature = document.querySelector('input[name="user_ask_feature"]:checked')            // Checks choice of Radio buttons when user press ASK
      
   document.getElementById("lets play").innerHTML = "You asked if X - " + feature.id;        // Prints out the users Choice           
-  console.log(feature.value); 
-}
+  console.log(feature.value);
+  }
+
+
+
+// function storeNewPeople()     // Should be 
+
+// I cant get the choosen feature from radio btn to be used in the next function
+
+
+
+
+
+
+
+
+  //for (checkPeopleFeatures()){                             // Working Function that should return a list of people with the value choosen in radio-btn
+  //    then function removePeople(feature){                 // Only thing wrong with it is I get an empty string in the console
+  //          const filteredPeople = people.filter((item) =>{                    
+  //          return item.value === (feature.value)
+  //        })
+  //        console.log(filteredPeople);
+          
+  //      }}
+
 // let (feature.value)  
 
 
@@ -42,10 +68,30 @@ console.log(slotorder);
 
 
 
+// Do the removePeople function here
+function removePeople(){
+const filteredPeople = people.filter((item) =>{
+  return item.sex === ('male')      // The input from radio-btn should be where male is -- document.querySelector('input[name="user_ask_feature"]:checked')
+})
+console.log(filteredPeople)
+}
 
 
 
 
+
+
+// function guessX ()                   // Activates when user clicks GUESS, should react when user clicks images that are not filtered out
+
+
+
+
+
+// function countMoves()               // Each time a user clicks ASK or GUESS a counter drops from 4 - 0, at 0 its GAME OVER
+
+
+
+// function gameOver()                  // Informs player that its GAME OVER and Returns the game to starting position
 
 
 
@@ -55,7 +101,7 @@ console.log(slotorder);
 
 
 
-//const foundcards = people.find((item) => {                      // function to check Input from ASK button against values in people 
+//const foundcards = people.find((item) => {    // function to check Input from ASK button against values in people 
 //  return item.hair === 'long'
 //})
 //console.log(foundcards);
@@ -143,7 +189,7 @@ let people =[ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', img: 'a
               {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'neutral', img: 'assets/images/characters/28 man angry brunette shorthair.jpg'},
               {hair: 'brown', hairtype: 'short', sex: 'man', mood: 'angry', img: 'assets/images/characters/28 man angry brunette shorthair.jpg'},
               {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'happy', img: 'assets/images/characters/29 girl brunette happy longhair.jpg'},
-              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', img: 'assets/images/characters/30 girl nohappy blond longhair.jpg'},
+              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', img: 'assets/images/characters/30 girl nohappy blond longhair.jpg'}
             ]
 
 
@@ -172,4 +218,4 @@ let people =[ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', img: 'a
 	 // function renderIma(){                                              // This function should render images to the slots on the game board
 	 //  for (let choosen of people === (choosen.length === 13))                                                                            // There has to be an element also to randomize the images that gets choosen
 	 //   let images = document.createElement('img');
-	 //   images.appendChild('img');
+	 //   images.appendChild('img')
