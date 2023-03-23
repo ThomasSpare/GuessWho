@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (){
-  document.getElementById("newgamebtn").addEventListener("click", enterUserName);
- document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
+  document.getElementById("newgamebtn").addEventListener("click", enterUserName, startGame);
+ //document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
  // document.getElementById("ask").addEventListener("click", removePeople);
 //  document.getElementById("guess").addEventListener("click", guessX);
  
@@ -27,34 +27,82 @@ function enterUserName(){
   document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
   document.getElementById("instructions").innerHTML =
   "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK"
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function startGame() {
+  
+  // shuffle people to slots
+  renderImages(people);
+
+}
+
+
+
+// print img to slots
+function renderImages() {
+  for (let p of people) {
+  let img = document.createElement(img)
+  body.append(img)
+  document.getElementsByClassName('slot').innerHTML = (img);
+}
+}
+
+
+//
+
+
+function filterPeople(prop, val){
+  return people.filter((p) => {
+    return people[prop] === val
+  })
+}
+
+
+
+
+
+
+
   //let peoplestring = new Array(people);
   //console.log(peoplestring);
   //let slots = document.getElementsByClassName("slot");
 //let slotorder = new Array(slots)
 //console.log(slotorder);
 
-let sexVal = document.querySelector('input[name="sex"]:checked')
-then function checkPeopleFeatures(sexVal)
-let hairVal = document.querySelector('input[name="hair"]:checked')
-this function checkPeopleFeatures(hairVal)
-let moodVal = document.querySelector('input[name="mood"]:checked')
-this function checkPeopleFeatures(moodVal)
-let glassesVal = document.querySelector('input[name="glasses"]:checked')
-this function checkPeopleFeatures(glassesVal)
-let beardVal = document.querySelector('input[name="beard"]:checked')
-this function checkPeopleFeatures(beardVal)
-let ageVal = document.querySelector('input[name="age"]:checked')
-this function checkPeopleFeatures(ageVal)
+//let sexVal = document.querySelector('input[name="sex"]:checked')
+//then function checkPeopleFeatures(sexVal)
+//let hairVal = document.querySelector('input[name="hair"]:checked')
+//this function checkPeopleFeatures(hairVal)
+//let moodVal = document.querySelector('input[name="mood"]:checked')
+//this function checkPeopleFeatures(moodVal)
+//let glassesVal = document.querySelector('input[name="glasses"]:checked')
+//this function checkPeopleFeatures(glassesVal)
+//let beardVal = document.querySelector('input[name="beard"]:checked')
+//this function checkPeopleFeatures(beardVal)
+//let ageVal = document.querySelector('input[name="age"]:checked')
+//this function checkPeopleFeatures(ageVal)
 
 
 
 //let count = 0
 //do {count = count + 1;
-  function checkPeopleFeatures(){
-  console.log(sum of function checkPeopleFeatures())                                                                
+  //function checkPeopleFeatures(){
+  //console.log(sum of function checkPeopleFeatures())                                                                
   //document.getElementById("lets play").innerHTML = "You asked if X - " + feature;
-  }
+  //}
 
 
 // for (checkPeopleFeatures()){                                       // Working Function that should return a list of people with the value choosen in radio-btn
