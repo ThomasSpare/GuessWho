@@ -2,10 +2,20 @@ document.addEventListener("DOMContentLoaded", function (){
   document.getElementById("newgamebtn").addEventListener("click", enterUserName);
  document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
  document.getElementById("ask").addEventListener("click", removePeople);
- document.getElementById("guess").addEventListener("click", guessX);
+//  document.getElementById("guess").addEventListener("click", guessX);
  
   });
   // document.getElementById("newgame").addEventListener("click", enterUserName);
+
+  // const slots = document.querySelectorAll('.slot');
+
+const deckOfCards = Array.from(document.querySelectorAll('.cards'));  //  this get all the cards from unseen div
+console.log(deckOfCards);
+
+
+  
+
+  // const cardimages = S
 
 
 function enterUserName(){
@@ -62,7 +72,12 @@ console.log(slotorder);
 
 
 
-
+function placeCards(){
+  for(let card of cards){
+    let randomPos = Math.floor(Math.random()*13);
+    card.style.order = randomPos;
+  }
+}
 
 
 

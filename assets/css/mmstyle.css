@@ -22,6 +22,9 @@ header{text-align: center;
         rgba(253,187,45,1) 100%)}
 radio-btn::after{}                                 /* Pseudo selector for JS -- input[type="radio"]:checked  */
 
+.unseen{
+        display: none;
+}
 .updiv{height: 0vw;
         align-items: center;
 }
