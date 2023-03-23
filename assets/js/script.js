@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function (){
   document.getElementById("newgamebtn").addEventListener("click", enterUserName);
  document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
- document.getElementById("ask").addEventListener("click", removePeople);
+ // document.getElementById("ask").addEventListener("click", removePeople);
 //  document.getElementById("guess").addEventListener("click", guessX);
  
   });
@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function (){
 
   // const slots = document.querySelectorAll('.slot');
 
-const deckOfCards = Array.from(document.querySelectorAll('.cards'));  //  this get all the cards from unseen div
-console.log(deckOfCards);
+// const deckOfCards = Array.from(document.querySelectorAll('.cards'));  //  this get all the cards from unseen div
+// console.log(deckOfCards);
 
 
   
@@ -26,70 +26,60 @@ function enterUserName(){
   else console.log("Lets play", userName);
   document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
   document.getElementById("instructions").innerHTML =
-  "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK";
-  let peoplestring = new Array(people);
-  console.log(peoplestring);
-  let slots = document.getElementsByClassName("slot");
-let slotorder = new Array(slots)
-console.log(slotorder);
+  "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK"
 }
+  //let peoplestring = new Array(people);
+  //console.log(peoplestring);
+  //let slots = document.getElementsByClassName("slot");
+//let slotorder = new Array(slots)
+//console.log(slotorder);
 
+let sexVal = document.querySelector('input[name="sex"]:checked')
+then function checkPeopleFeatures(sexVal)
+let hairVal = document.querySelector('input[name="hair"]:checked')
+this function checkPeopleFeatures(hairVal)
+let moodVal = document.querySelector('input[name="mood"]:checked')
+this function checkPeopleFeatures(moodVal)
+let glassesVal = document.querySelector('input[name="glasses"]:checked')
+this function checkPeopleFeatures(glassesVal)
+let beardVal = document.querySelector('input[name="beard"]:checked')
+this function checkPeopleFeatures(beardVal)
+let ageVal = document.querySelector('input[name="age"]:checked')
+this function checkPeopleFeatures(ageVal)
 
 
 
 //let count = 0
 //do {count = count + 1;
   function checkPeopleFeatures(){
-  let feature = document.querySelector('input[name="user_ask_feature"]:checked')            // Checks choice of Radio buttons when user press ASK
-     
-  document.getElementById("lets play").innerHTML = "You asked if X - " + feature.id;        // Prints out the users Choice           
-  console.log(feature.value);
+  console.log(sum of function checkPeopleFeatures())                                                                
+  //document.getElementById("lets play").innerHTML = "You asked if X - " + feature;
   }
 
 
-
-// function storeNewPeople()     // Should be 
-
-// I cant get the choosen feature from radio btn to be used in the next function
-
-
-
-
-
-
-
-
-  //for (checkPeopleFeatures()){                             // Working Function that should return a list of people with the value choosen in radio-btn
-  //    then function removePeople(feature){                 // Only thing wrong with it is I get an empty string in the console
-  //          const filteredPeople = people.filter((item) =>{                    
-  //          return item.value === (feature.value)
-  //        })
-  //        console.log(filteredPeople);
-          
-  //      }}
-
-// let (feature.value)  
-
-
-
-function placeCards(){
-  for(let card of cards){
-    let randomPos = Math.floor(Math.random()*13);
-    card.style.order = randomPos;
-  }
-}
+// for (checkPeopleFeatures()){                                       // Working Function that should return a list of people with the value choosen in radio-btn
+//    then function removePeople(){                                 // Only thing wrong with it is I get an empty string in the console
+ //         const filteredPeople = people.filter((item) =>{                    
+  //   return item.value === (feature.value)
+   //         })
+// function placeCards(){
+//  for(let card of cards){
+//    let randomPos = Math.floor(Math.random()*13);
+//    card.style.order = randomPos;
+//  }
+//}
 
 
 
 
 
 // Do the removePeople function here
-function removePeople(){
-const filteredPeople = people.filter((item) =>{
-  return item.sex === ('male')      // The input from radio-btn should be where male is -- document.querySelector('input[name="user_ask_feature"]:checked')
-})
-console.log(filteredPeople)
-}
+// function removePeople(){
+// const filteredPeople = people.filter((item) =>{
+//   return item.sex === ('male')      // The input from radio-btn should be where male is -- document.querySelector('input[name="user_ask_feature"]:checked')
+//})
+// console.log(filteredPeople)
+//}
 
 
 
