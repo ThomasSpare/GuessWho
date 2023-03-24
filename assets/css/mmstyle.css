@@ -36,8 +36,14 @@ header{text-align: center;
         height: 330px;
         margin-bottom:  20px;
 }
+.dialog_div{position: relative;
+        height: 100px;
+
+
+}
 .play_game{display:flex; 
-        height: 20px;
+        height: 25px;
+        margin-bottom: 40px;
         justify-content: center
         ;
 }
@@ -83,7 +89,7 @@ header{text-align: center;
         height: 150px;
         z-index: 999;    
 }
-#newgame{height: 70px;
+#newgamebtn{height: 70px;
         z-index: 999;
 }
 button{padding: 10px;

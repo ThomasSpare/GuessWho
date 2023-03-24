@@ -1,3 +1,25 @@
+document.addEventListener("DOMContentLoaded", function () {
+  //userInput = document.getElementById('userInput')
+  //userInput.addEventListener('input', (e) => {
+
+    })
+    const newGameButton = document.getElementById("newgamebtn")              // At load of page player will get prompted to enter a username
+    const someString = "Username";                                         // If blank alert enter username
+
+newGameButton.addEventListener("click", function(){
+  var userName = document.getElementById("myText").value;             // Username input, display instructions when press play
+    if (userName === ""){
+    alert('Please enter a username');
+  } 
+    else console.log("Lets play", userName);
+      document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
+      document.getElementById("instructions").innerHTML =
+  "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK";
+
+});
+
+
+// This Array consist of all the people on the Cards with 7 properties (and one img property) and values
 
 let people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/1 man blonde angry shorthair.jpg'},
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/2 girl blond nohappy longhair.jpg'},
@@ -31,55 +53,48 @@ let people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasse
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/30 girl nohappy blond longhair.jpg'}
             ]
 
-console.table(people);
 
-const btnssex = document.getElementsByClassName('btnSex');                 // RadioButtons of all the property Values corresponding to people
-const btnshair = document.getElementsByClassName('btnHair');
-const btnshairtype = document.getElementsByClassName('btnHairtype');
-const btnsmood = document.getElementsByClassName('btnMood');
-const btnsage = document.getElementsByClassName('btnAge');
-const btnsglasses = document.getElementsByClassName('btnGlasses');
-const btnsbeard = document.getElementsByClassName('btnBeard');
 
-const RADIOBUTTONS = (btnssex + btnshair + btnshairtype + btnsmood + btnsage + btnsglasses + btnsbeard);
+let sexVal = document.querySelector('input[name="sex"]:checked')         // Input of property from radio buttons 
+let hairVal = document.querySelector('input[name="hair"]:checked')
+let hairtypeVal = document.querySelector('input[name="hairtype"]:checked')
+let moodVal = document.querySelector('input[name="mood"]:checked')
+let ageVal = document.querySelector('input[name="age"]:checked')
+let glassesVal = document.querySelector('input[name="glasses"]:checked')
+let beardVal = document.querySelector('input[name="beard"]:checked')
+console.log(sexVal);
+
+
+//const btnssex = document.getElementsByClassName('btnSex').addEventListener('click');       // RadioButtons of all the property Values corresponding to people
+//const btnshair = document.getElementsByClassName('btnHair');
+//const btnshairtype = document.getElementsByClassName('btnHairtype');
+//const btnsmood = document.getElementsByClassName('btnMood');
+//const btnsage = document.getElementsByClassName('btnAge');
+//const btnsglasses = document.getElementsByClassName('btnGlasses');
+//const btnsbeard = document.getElementsByClassName('btnBeard');
+
+//const RADIOBUTTONS = (btnssex + btnshair + btnshairtype + btnsmood + btnsage + btnsglasses + btnsbeard);
 // RADIOBUTTONS.document.addEventListener('check', ask);
 
 //var DIALOG = getElementsByClassName('DIALOG');
 
 function ask(){
 
-  document.getElementsByClassName("DIALOG").innerHTML = "Good, now hit ask";
+  document.getElementsByClassName("DIALOG").innerHTML = "Good, now just hit ask";
 }
 
 
 // let askvalue = (answer from func that gives the asked property value)  // for instance 'man' 
 
-
-const filteredpeople = people.filter(value => value.sex === 'man');  // filter people function
+let person = 
+function filteredPeople(){
+const filteredpeople = people.filter(value => value.sex === 'man');
+  people.filter(person => {
+    return person[prop] === value;
+  })                               // filter people function
 console.table(filteredpeople);
-
-
-
-
-class deck {
-constructor (people){
-  this.cards = cards
 }
-}
-
-
-
-            function freshDeck(){
-              return cards.flatmap(prop =>{
-                  return prop.map(value => {
-                      return new Card(prop, value)
-
-                  })
-              })
-          }          
-
-// console.dir(cards);
-
+// Nu har du filteredpeople som output ex alla 'män'
 
 
 
@@ -128,17 +143,7 @@ letVal = document.querySelector();
   console.log(letVal);
 }
 
-function enterUserName(){
-  var userName = document.getElementById("myText").value;             // Username input, display instructions when press play
-  if (userName === ""){
-    alert('Please enter a username');
-  } 
-  else console.log("Lets play", userName);
-  document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
-  document.getElementById("instructions").innerHTML =
-  "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK"
 
-}
 
 
 
