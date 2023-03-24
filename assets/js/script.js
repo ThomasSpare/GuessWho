@@ -1,9 +1,44 @@
-document.addEventListener("DOMContentLoaded", function (){
 
-  console.log('hej');
-});
- // document.getElementsByClassName('radiobtn').addEventListener('click', releaseNameButton)
-  //document.getElementById("newgamebtn").addEventListener("click", enterUserName, startGame);
+class AudioController {
+  constructor() {
+      this.bgMusic = new Audio("assets/sounds/backgr_music.wav");
+      this.flipSound = new Audio('Assets/Audio/flip.wav');
+      this.matchSound = new Audio('Assets/Audio/match.wav');
+      this.victorySound = new Audio('Assets/Audio/victory.wav');
+      this.gameOverSound = new Audio('Assets/Audio/gameOver.wav');
+      this.bgMusic.volume = 0.5;
+      this.bgMusic.loop = true;
+  }
+
+  startMusic() {
+    this.bgMusic.play();
+  }
+
+startMusic() {
+    this.bgMusic.play();
+}
+stopMusic() {
+    this.bgMusic.pause();
+    this.bgMusic.currentTime = 0;
+}
+flip() {
+    this.flipSound.play();
+}
+match() {
+    this.matchSound.play();
+}
+victory() {
+    this.stopMusic();
+    this.victorySound.play();
+}
+gameOver() {
+    this.stopMusic();
+    this.gameOverSound.play();
+}
+
+}
+
+console.log('hej');
 //document.querySelectorAll.getElementsBy("radiobtn")
  //document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
  // document.getElementById("ask").addEventListener("click", removePeople);
@@ -19,11 +54,9 @@ document.addEventListener("DOMContentLoaded", function (){
 //console.log(people);
 
   // const cardimages = S
-  console.log("HEJ");
-
 function releaseNameButton(){
-  document.querySelector('input[name=""]:checked')
-  
+Main();letVal = document.querySelector('input[value=""]:checked');
+  console.log(letVal);
 }
 
 
@@ -41,7 +74,7 @@ function enterUserName(){
 }
 
 
-console.log('hej');
+
 
 
 //const radiobtns = document.querySelectorAll('radiobtn');
@@ -75,6 +108,7 @@ function renderImages() {
 }
 }
 
+console.log("Hej");
 
 //
 
@@ -223,7 +257,7 @@ function filterPeople(prop,val){
 // people list for use in filter function, the property img is a unique identifier
 
 
-let people =[ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses: 'no', age:'notold', beard: 'no', img: 'assets/images/characters/1 man blonde angry shorthair.jpg'},
+let people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses: 'no', age:'notold', beard: 'no', img: 'assets/images/characters/1 man blonde angry shorthair.jpg'},
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'notold', beard: 'no', img: 'assets/images/characters/2 girl blond nohappy longhair.jpg'},
               {hair: 'black', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'notold', beard: 'no', img: 'assets/images/characters/3 girl blackhair longhair nohappy.jpg'},
               {hair: 'red', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'notold', beard: 'no', img: 'assets/images/characters/4 girl redhair nohappy longhair.jpg'},
@@ -257,8 +291,14 @@ let people =[ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses
 
 
 
+                 // <----   MUSIC & SOUNDS
 
-//  let randomImg = 0;
+
+
+
+
+
+          //  let randomImg = 0;
  // for (let i = 0; i < 13; i++){  }                           // incomplete randomizer function that returns 13 digits between 0 - 29
   
 //do {

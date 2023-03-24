@@ -29,10 +29,10 @@ header{text-align: center;
 #ask::after{
         content:attr(data--value);
 }  
-:radiobtn{
-
-}                               /* Pseudo selector for JS -- input[type="radio"]:checked  */
-
+                               /* Pseudo selector for JS -- input[type="radio"]:checked  */
+.radiobtn::after{
+        content: attr(data--value);           /* selector for kind of btn */
+}
 .unseen{
         display: none;
 }
