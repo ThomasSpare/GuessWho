@@ -1,7 +1,3 @@
-*, *::after, *::before{
-        box-sizing: border-box;
-}
-
 
 body{margin: 0;
         background: rgb(34,193,195);
@@ -33,9 +29,6 @@ header{text-align: center;
 .radiobtn::after{
         content: attr(data--value);           /* selector for kind of btn */
 }
-.unseen{
-        display: none;
-}
 .updiv{height: 0vw;
         align-items: center;
 }
@@ -49,8 +42,10 @@ header{text-align: center;
         ;
 }
 .parent{display: flex;
+        margin-top: 40vh;
         position: relative;
-        height:60vh;
+        margin-top: 40vh;
+        height:30vh;
         width: 100vw;
 }
 .child{ 
@@ -60,7 +55,7 @@ header{text-align: center;
         border-radius: 30px;
         width: 70%;
         height: 58vh;
-        margin-top: 10vh;
+        margin-top: 0vh;
         margin-left:10vw;
         background-color: hwb(51 0% 9%);
         padding: 0;
@@ -77,14 +72,16 @@ header{text-align: center;
         border-color: hwb(56 0% 38%);
         border-style:ridge}
 .slot13{height: 170px;
+        z-index: 0;
         margin-top: 10vh;
-        margin-left: 10%; border: 5px;
+        margin-left: -250px; border: 5px;
         border-color:  hwb(17 0% 38%);
         border-style:ridge;
         border-radius: 0px}
-.user_question_form{margin-left: 35%;
-        margin-top: 80px;
-        height: 150px;    
+.user_question_form{margin-left: 60%;
+        margin-top: 0px;
+        height: 150px;
+        z-index: 999;    
 }
 #newgame{height: 70px;
         z-index: 999;
