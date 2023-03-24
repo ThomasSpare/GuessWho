@@ -1,12 +1,13 @@
-//document.addEventListener("DOMContentLoaded", function (){
+document.addEventListener("DOMContentLoaded", function (){
+
+  console.log('hej');
+});
  // document.getElementsByClassName('radiobtn').addEventListener('click', releaseNameButton)
   //document.getElementById("newgamebtn").addEventListener("click", enterUserName, startGame);
 //document.querySelectorAll.getElementsBy("radiobtn")
  //document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
  // document.getElementById("ask").addEventListener("click", removePeople);
 //  document.getElementById("guess").addEventListener("click", guessX);
- 
-  //});
   // document.getElementById("newgame").addEventListener("click", enterUserName);
 
   // const slots = document.querySelectorAll('.slot');
@@ -18,6 +19,7 @@
 //console.log(people);
 
   // const cardimages = S
+  console.log("HEJ");
 
 function releaseNameButton(){
   document.querySelector('input[name=""]:checked')
@@ -39,15 +41,15 @@ function enterUserName(){
 }
 
 
-
+console.log('hej');
 
 
 //const radiobtns = document.querySelectorAll('radiobtn');
 
-for (const button of radiobtns){
-  button.addEventListener('checked',);
-  console.log(radiobtns.value)
-}
+//for (const button of radiobtns){
+//  button.addEventListener('checked',);
+//  console.log(radiobtns.value)
+//}
 
 
 
@@ -187,12 +189,6 @@ function filterPeople(prop,val){
 //function renderImages()                                        
 //for (let images = document.createElement('img'));
 //images.appendChild('img');
-
-
-
-
-
-
 
   // let peoplestring = (people.getRandomInt);
   // console.log(peoplestring[3]);
