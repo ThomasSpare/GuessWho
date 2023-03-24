@@ -1,4 +1,10 @@
-body{background: rgb(34,193,195);
+*, *::after, *::before{
+        box-sizing: border-box;
+}
+
+
+body{margin: 0;
+        background: rgb(34,193,195);
      background: linear-gradient(0deg,
      rgba(34,193,195,1) 0%,
      rgba(253,187,45,1) 100%);
@@ -20,8 +26,10 @@ header{text-align: center;
         background: linear-gradient(0deg,
         rgba(34,193,195,1) 0%,
         rgba(253,187,45,1) 100%)}
-radio-btn::after{}  
-:radiobtn{v
+#ask::after{
+        content:attr(data--value);
+}  
+:radiobtn{
 
 }                               /* Pseudo selector for JS -- input[type="radio"]:checked  */
 

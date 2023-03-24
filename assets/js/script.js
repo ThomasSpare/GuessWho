@@ -1,21 +1,21 @@
-document.addEventListener("DOMContentLoaded", function (){
+//document.addEventListener("DOMContentLoaded", function (){
  // document.getElementsByClassName('radiobtn').addEventListener('click', releaseNameButton)
-  document.getElementById("newgamebtn").addEventListener("click", enterUserName, startGame);
-  //document.querySelectorAll.getElementsByClassName("radiobtn")
+  //document.getElementById("newgamebtn").addEventListener("click", enterUserName, startGame);
+//document.querySelectorAll.getElementsBy("radiobtn")
  //document.getElementById("ask").addEventListener("click", checkPeopleFeatures);
  // document.getElementById("ask").addEventListener("click", removePeople);
 //  document.getElementById("guess").addEventListener("click", guessX);
  
-  });
+  //});
   // document.getElementById("newgame").addEventListener("click", enterUserName);
 
   // const slots = document.querySelectorAll('.slot');
 
 // const deckOfCards = Array.from(document.querySelectorAll('.cards'));  //  this get all the cards from unseen div
 // console.log(deckOfCards);
-
-
   
+
+//console.log(people);
 
   // const cardimages = S
 
@@ -42,7 +42,7 @@ function enterUserName(){
 
 
 
-const radiobtns = document.querySelectorAll('radiobtn');
+//const radiobtns = document.querySelectorAll('radiobtn');
 
 for (const button of radiobtns){
   button.addEventListener('checked',);
@@ -86,7 +86,7 @@ function filterPeople(prop,val){
 
 
 
-
+// let askValue = document.querySelector.addEventListener()('input[name="sex"]:checked')
 
 
 
