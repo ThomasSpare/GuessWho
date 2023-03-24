@@ -14,7 +14,7 @@ newGameButton.addEventListener("click", function(){
     else console.log("Lets play", userName);
       document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
       document.getElementById("instructions").innerHTML =
-  "The goal of the game is to guess who the person is behind<br>the hidden card to the left of game board.<br>Choose a question and hit ASK";
+  "The goal of the game is to guess who the person is behind the hidden card.<br>You only have One guess<br> Choose a question and hit ASK to get more clues";
 
 });
 
@@ -63,6 +63,15 @@ let ageVal = document.querySelector('input[name="age"]:checked')
 let glassesVal = document.querySelector('input[name="glasses"]:checked')
 let beardVal = document.querySelector('input[name="beard"]:checked')
 console.log(sexVal);
+
+
+
+
+function guessWho(){
+
+}
+
+
 
 
 //const btnssex = document.getElementsByClassName('btnSex').addEventListener('click');       // RadioButtons of all the property Values corresponding to people

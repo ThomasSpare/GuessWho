@@ -29,7 +29,7 @@
            </div>
            <img class="slot13" src="assets/images/characters/13 girl blondhair happy longhair.jpg">
        </div>
-       <div class="Dialog"></div>
+       <div></div>
        <div>
          <section class="user_question_form">
             <h2>QUESTIONS <button data-type="question" id="ask" inputmode="submit" value="user_ask">ASK?</button> </h2>    <!-- Submit button & Input alt for user Questions-->
@@ -73,14 +73,34 @@
             <button data-type="guess" id="guess" style="margin-left: 20%; background-color: rgb(209, 77, 105);" 
             value="user_guess">GUESS</button> <!-- After tapping guess button the user will be promted to click image-->
             </div>
+           
          </section>
+       </div>
+       <div id="lets_play">
+
+       </div>
+       <div id="instructions">
        </div>
          
             <div class="parent">
                <script class="cpu_uestion"></script>                        <!-- CPU questions pops up here-->
                 <div class="child">
-                   <diV class="first_row">
-                     <img class="slot" id="1" src="assets/images/characters/1 man blonde angry shorthair.jpg">
+                  
+                   <div class="first_row">
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     <img id="image_random"/>
+                     
+
+
+                     <div>class="slot" id="1" src="assets/images/characters/1 man blonde angry shorthair.jpg"></div>
                      <img class="slot" id="2" src="assets/images/characters/2 girl blond nohappy longhair.jpg">
                      <img class="slot" id="3" src="assets/images/characters/3 girl blackhair longhair nohappy.jpg">
                      <img class="slot" id="4" src="assets/images/characters/4 girl redhair nohappy longhair.jpg"> 
@@ -130,6 +150,7 @@
        <footer>
        </footer>
        <script>document.getElementById("lets play").innerHTML = ""</script>
+       <script>document.getElementsByClassName("slot1").innerHTML = ""</script>
        <script src="assets/js/script.js"></script>  
     </body>
 </html>
