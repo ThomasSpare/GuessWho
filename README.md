@@ -1,6 +1,6 @@
 # GUESS WHO GAME
 ---
-![Guess who game]assets/images/graphics/GUESSWHO2.jpg
+![Guess who game](assets/images/graphics/GUESSWHO2.jpg)
 Guess who is a game I've often played with my kids.
 It usually requires two players, but in this case the player
 is playing solo. From the outset I had a plan to make it a game
@@ -23,11 +23,22 @@ one of the cards showing people. The player has one guess, then its game over.
 Unfortunatly I did´nt get the game to function properly in time for submission.
 The time to learn about manipulating arrays and different methods and functions to display
 images etc across the DOM was not enough. I almost pulled it together and with a couple of days
-I could make run as planned.
+I could make it run as planned.
 
 ---
 
-Features
+## Features
+---
+## Questions
+--
+The player is able to choose from a range of categories that corresponds to the features of the persons on the card.
+For instance the player can ask about values of age, sex, haircolor, hairtype, mood, glasses, beard - Is the hidden person
+blond will promt you asked if the hidden person is 'blond' - the answer is 'no'.
+
+## Shuffle play Cards
+I tried making the visible cards shuffle after each new game to make it more interesting and disorienting. Unfortunatly this function
+dont work properly yet. 
+
 
 User stories
 
@@ -38,6 +49,10 @@ First time visitor
 Frequent visitor goals
 
 Design
+---
+Playing Cards where found on dreamstime where I have an account and cropped into equal size using Adobe Illustrator express.
+The table that the gameboard is standing on was also found on dreamstime. i tried making the layout look fun with the sort of comical
+persons on the cards. 
 
 Future Implementations
 
