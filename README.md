@@ -1,6 +1,6 @@
 # GUESS WHO GAME
 ---
-[!]
+![Guess who game]assets/images/graphics/GUESSWHO2.jpg
 Guess who is a game I've often played with my kids.
 It usually requires two players, but in this case the player
 is playing solo. From the outset I had a plan to make it a game
