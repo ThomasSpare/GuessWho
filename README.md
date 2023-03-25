@@ -72,11 +72,12 @@ complemented with alt text also.
 
 ---
 
-# Debugging
-The Html and CSS code is fully functional without errors. I have used Visual studio error code messages as guide as work progressed.
-The errors showing up are from imgages that are passed from script.js using the function showHiddenCard(). Somehow the array I created
-of images for this function dont show up in the browser. This function should shuffle a random card from the 30 persons avaiable at each prss
-on the new game button. The card is chaning value to different persons in the console, but dont show up in browser.
+# Debugging, showHiddenCard() and innerHTML
+The Html and CSS code in general is fully functional without errors. I have used Visual studio error code messages as guide to javascript code.
+The errors showing up are from images that are passed with innerHTML between script.js and index.html using the function showHiddenCard(). 
+Somehow the array I created of images for this function dont show up in the browser. This function should shuffle a random card from 
+the 30 persons avaiable at each press on the new game button. 
+The hidden card is changing value to different persons in the console for each new game button push, but dont show up in browser.
 
 ### Changing img file name
 My last attempt to debugg the game was to change all the img file names in the image folder from file names with space between into filenames with
