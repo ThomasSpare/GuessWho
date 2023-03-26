@@ -72,7 +72,8 @@ header{text-align: center;
 }
 .third_row{background-color: rgb(248, 187, 95);
 }
-#slot1{position: absolute;
+#slot1{ over; 
+        position: absolute;
         margin: 20px; 
         border: 5px;
         border-color: hwb(56 0% 38%);

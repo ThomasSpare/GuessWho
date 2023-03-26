@@ -75,13 +75,24 @@ function renderHiddenImage(){                                                   
   random_index = Math.floor(Math.random() * hiddenpeople.length);
 selected_image = hiddenpeople[random_index]
 document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
+let hiddenperson = selected_image
+console.log(selected_image);
 }
 
-function guessPointPerson(){
-  
 
+
+
+var guessimage = document.querySelectorAll('img[src*="/item"]');
+
+let cards = document.getElementsByClassName('slot').namedItem;
+cards.addEventListener('click',
+function guessPointPerson(){  
+  if (selected_image(src="/item") = cards)
+      alert('Its Correct!');
+      else console.log(cards);
 }
-
+)
+console.log(guessimage);
 
 
 
