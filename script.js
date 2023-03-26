@@ -21,38 +21,38 @@ newGameButton.addEventListener("click", function(){
 
 // This Array consist of all the people on the Cards with 7 properties (and one img property) and values
 
-let people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/1 man blonde angry shorthair.jpg'},
-              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/2 girl blond nohappy longhair.jpg'},
-              {hair: 'black', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/3 girl blackhair longhair nohappy.jpg'},
-              {hair: 'red', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/4 girl redhair nohappy longhair.jpg'},
-              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/5 girl blond nohappy longhair.jpg'},
-              {hair: 'black', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/6 man shorthair blackhair happy.jpg'},
-              {hair: 'red', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/7 girl redhair happy longhair.jpg'},
-              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/8 man blondhair nohappy shorthair.jpg'},
-              {hair: 'black', hairtype: 'short', sex: 'man', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/9 man blackhair nohappy shorthair.jpg'},
-              {hair: 'brown', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/10 man brownhair happy shorthair.jpg'},
-              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/11 man blondhair happy shorthair.jpg'},
-              {hair: 'red', hairtype: 'long', sex: 'woman', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/12 girl angry redhair longhair.jpg'},
-              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/13 girl blondhair happy longhair.jpg'},
-              {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/14 girl brownhair happy longhair.jpg'},
-              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/15 man blondhair nohappy shorthair.jpg'},
-              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/16 man blondhair happy shorthair.jpg'},
-              {hair: 'white', hairtype: 'short', sex: 'man', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/17 man whitehair glasses shorthair nohappy.jpg'},
-              {hair: 'blond', hairtype: 'short', sex: 'woman', mood: 'happy', glasses: 'yes', age:'no', beard: 'no', img: 'assets/images/characters/18 girl glasses blondhair happy shorthair.jpg'},
-              {hair: 'black', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'yes', age:'no', beard: 'no', img: 'assets/images/characters/19 man blondhair happy shorthair glasses.jpg'},
-              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'neutral', glasses: 'no', age:'no', beard: 'yes', img: 'assets/images/characters/20 man blondhair beard shorthair nohappy.jpg'},
-              {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/21 girl colorhair hairstyle nohappy longhair.jpg'},
-              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/22 girl blondhair hairstyle longhair nohappy.jpg'},
-              {hair: 'no', hairtype: 'no', sex: 'man', mood: 'neutral', glasses: 'no', age:'yes', beard: 'no', img: 'assets/images/characters/23 man nohair nohappy old.jpg'},
-              {hair: 'no', hairtype: 'no', sex: 'man', mood: 'neutral', glasses: 'no', age:'yes', beard: 'no', img: 'assets/images/characters/24 man nohair nohappy old.jpg'},
-              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/25 girl blondhair nohappy longhair.jpg'},
-              {hair: 'blond', hairtype: 'long', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/26 man blondhair longhair happy.jpg'},
-              {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/28 man angry brunette shorthair.jpg'},
-              {hair: 'brown', hairtype: 'short', sex: 'man', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/28 man angry brunette shorthair.jpg'},
-              {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/29 girl brunette happy longhair.jpg'},
-              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/30 girl nohappy blond longhair.jpg'}
+let people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/1.jpg'},
+              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/2.jpg'},
+              {hair: 'black', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/3.jpg'},
+              {hair: 'red', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/4.jpg'},
+              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/5.jpg'},
+              {hair: 'black', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/6.jpg'},
+              {hair: 'red', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/7.jpg'},
+              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/8.jpg'},
+              {hair: 'black', hairtype: 'short', sex: 'man', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/9.jpg'},
+              {hair: 'brown', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/10.jpg'},
+              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/11.jpg'},
+              {hair: 'red', hairtype: 'long', sex: 'woman', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/12.jpg'},
+              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/13.jpg'},
+              {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/14.jpg'},
+              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/15.jpg'},
+              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/16.jpg'},
+              {hair: 'white', hairtype: 'short', sex: 'man', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/17.jpg'},
+              {hair: 'blond', hairtype: 'short', sex: 'woman', mood: 'happy', glasses: 'yes', age:'no', beard: 'no', img: 'assets/images/characters/18.jpg'},
+              {hair: 'black', hairtype: 'short', sex: 'man', mood: 'happy', glasses: 'yes', age:'no', beard: 'no', img: 'assets/images/characters/19.jpg'},
+              {hair: 'blond', hairtype: 'short', sex: 'man', mood: 'neutral', glasses: 'no', age:'no', beard: 'yes', img: 'assets/images/characters/20.jpg'},
+              {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/21.jpg'},
+              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/22.jpg'},
+              {hair: 'no', hairtype: 'no', sex: 'man', mood: 'neutral', glasses: 'no', age:'yes', beard: 'no', img: 'assets/images/characters/23.jpg'},
+              {hair: 'no', hairtype: 'no', sex: 'man', mood: 'neutral', glasses: 'no', age:'yes', beard: 'no', img: 'assets/images/characters/24.jpg'},
+              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/25.jpg'},
+              {hair: 'blond', hairtype: 'long', sex: 'man', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/26.jpg'},
+              {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/27.jpg'},
+              {hair: 'brown', hairtype: 'short', sex: 'man', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/28.jpg'},
+              {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/29.jpg'},
+              {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/30.jpg'}
             ]
-
+console.table(people);
 
 
 let sexVal = document.querySelector('input[name="sex"]:checked')         // Input of property from radio buttons 
@@ -67,16 +67,18 @@ console.log(sexVal);
 
 
 
-hiddenpeople =['man blonde angry shorthair.jpg', '2.girl_blond_nohappy_longhair.jpg','3.girl_blackhair_longhair_nohappy.jpg']
+hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','12.jpg','13.jpg','14.jpg','15.jpg',
+               '16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','30.jpg']
 
-
-function renderHiddenImage(){ 
+              
+function renderHiddenImage(){                                                     // On new game button click random hidden card is generated
   random_index = Math.floor(Math.random() * hiddenpeople.length);
 selected_image = hiddenpeople[random_index]
 document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
 }
 
-function guessWho(){
+function guessPointPerson(){
+  
 
 }
 
