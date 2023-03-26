@@ -67,6 +67,15 @@ console.log(sexVal);
 
 
 
+hiddenpeople =['1.man_blonde_angry_shorthair.jpg', '2.girl_blond_nohappy_longhair.jpg','3.girl_blackhair_longhair_nohappy.jpg']
+
+
+function renderHiddenImage(){ 
+  random_index = Math.floor(Math.random() * hiddenpeople.length);
+selected_image = hiddenpeople[random_index]
+document.getElementById('slot1').src =`.assets/images/characters/${selected_image}`
+}
+
 function guessWho(){
 
 }
@@ -185,7 +194,7 @@ function renderImages() {
   for (let p of people) {
   let img = document.createElement(img)
   body.append(img)
-  document.getElementsByClassName('slot').innerHTML = (img);
+  document.getElementById('slot1').innerHTML = (img);
 }
 }
 
