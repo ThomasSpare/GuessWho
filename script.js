@@ -18,10 +18,12 @@ newGameButton.addEventListener("click", function(){
 
 });
 
+//newGameButton.addEventListener('click', renderBoardImages())
+
 
 // This Array consist of all the people on the Cards with 7 properties (and one img property) and values
 
-let people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/1.jpg'},
+const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/1.jpg'},
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'neutral',glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/2.jpg'},
               {hair: 'black', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/3.jpg'},
               {hair: 'red', hairtype: 'long', sex: 'woman', mood: 'neutral', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/4.jpg'},
@@ -52,7 +54,7 @@ let people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasse
               {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/29.jpg'},
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/30.jpg'}
             ]
-console.table(people);
+console.log(people.indexOf('img'));
 
 
 let sexVal = document.querySelector('input[name="sex"]:checked')         // Input of property from radio buttons 
@@ -78,21 +80,46 @@ document.getElementById('slot1').src =`/assets/images/characters/${selected_imag
 let hiddenperson = selected_image
 console.log(selected_image);
 }
+console.table(hiddenpeople);
+
+function renderBoardImages(hiddenpeople){
+   for (var i = 0; i < 29; ++i)
+   index = (29 - i)
+   selected_image = hiddenpeople[index];
+   document.getElementById('1').src =`/assets/images/characters/${selected_image}`
+ }
+
+
+//random_index = Math.floor(Math.random() * hiddenpeople.length);
+//while (random_index !== indexOf(selected_image)){
+//selected_image = hiddenpeople[random_index]
+//document.getElementsByClassName('slot').src =`/assets/images/characters/${selected_image}`
+//}
+
+
+
+//const anyslot = document.getElementsByClassName('slot')
+//anyslot.addEventListener('click')
+
+//const guessbutton = document.getElementById('guess')
+//guessbtton.addEventListener('click', )
+//var guessimage = document.querySelector(keyof,'img[src*="/item"]');
+
+
+//function cLick(){
+ // if (anyslot = )
+//}
 
 
 
 
-var guessimage = document.querySelectorAll('img[src*="/item"]');
 
-let cards = document.getElementsByClassName('slot').namedItem;
-cards.addEventListener('click',
-function guessPointPerson(){  
-  if (selected_image(src="/item") = cards)
+function guessPerson(){
+    if (selected_image = guessimage)
       alert('Its Correct!');
-      else console.log(cards);
-}
-)
-console.log(guessimage);
+    else
+      alert('GAME OVER');
+  }
 
 
 
