@@ -54,7 +54,7 @@ const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glas
               {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/29.jpg'},
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/30.jpg'}
             ]
-console.log(people.indexOf('img'));
+
 
 
 let sexVal = document.querySelector('input[name="sex"]:checked')         // Input of property from radio buttons 
@@ -64,12 +64,12 @@ let moodVal = document.querySelector('input[name="mood"]:checked')
 let ageVal = document.querySelector('input[name="age"]:checked')
 let glassesVal = document.querySelector('input[name="glasses"]:checked')
 let beardVal = document.querySelector('input[name="beard"]:checked')
-console.log(sexVal);
 
 
 
 
-hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','12.jpg','13.jpg','14.jpg','15.jpg',
+
+hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg',
                '16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','30.jpg']
 
               
@@ -78,16 +78,25 @@ function renderHiddenImage(){                                                   
 selected_image = hiddenpeople[random_index]
 document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
 let hiddenperson = selected_image
-console.log(selected_image);
 }
-console.table(hiddenpeople);
 
-function renderBoardImages(hiddenpeople){
-   for (var i = 0; i < 29; ++i)
-   index = (29 - i)
+
+
+
+
+
+function renderBoardImages(Array){
+   for (var i = 1; i <= 30; ++i){
+   index = (30 - i);
    selected_image = hiddenpeople[index];
-   document.getElementById('1').src =`/assets/images/characters/${selected_image}`
- }
+   console.log(index);
+   document.getElementById(index).src =`/assets/images/characters/${selected_image}`
+ }}
+
+renderBoardImages(hiddenpeople);
+
+
+
 
 
 //random_index = Math.floor(Math.random() * hiddenpeople.length);
