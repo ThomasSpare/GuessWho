@@ -15,9 +15,9 @@ newGameButton.addEventListener("click", function(){
       document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
       document.getElementById("instructions").innerHTML =
   "The goal of the game is to guess who the person is behind the hidden card.<br>You only have One guess<br> Choose a question and hit ASK to get more clues";
-
 });
-
+  //const guessButton = document.getElementById("guess")
+  //guessButton.addEventListener("click", guessHiddenPerson())
 //newGameButton.addEventListener('click', renderBoardImages())
 
 
@@ -78,12 +78,27 @@ function renderHiddenImage(){                                                   
 selected_image = hiddenpeople[random_index]
 document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
 let hiddenperson = selected_image
+console.log(hiddenperson)
+blaBla(hiddenperson)
+return hiddenperson
+}
+
+let anonymus = string('hiddenperson');  // probably errors bcs wrong type , must not be .jpg
+console.log(anonymus);
+
+
+function makeImageToId(hiddenperson){
+hiddenId = (string(hiddenperson) - ".jpg")
+console.log(hiddenId)   
 }
 
 
 
+//function guessHiddenPerson(){
+//  const correctCard.getElementById()
+//  document.addEventListener
 
-
+//}
 
 function renderBoardImages(Array){
    for (var i = 1; i <= 30; ++i){
