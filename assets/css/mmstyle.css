@@ -7,6 +7,7 @@ body{margin: 0;
      min-height: 100vh;
      min-width: 100vw; 
 }
+
 footer{height: 120px;
         min-width: 100vw;
         margin-top: 8vh;
@@ -14,6 +15,7 @@ footer{height: 120px;
         background-color:  rgb(32, 23, 10);
         position:static;
 }
+
 header{text-align: center;
         min-width: 100vw;
         height:100px;
@@ -21,7 +23,9 @@ header{text-align: center;
         background: rgb(34,193,195);
         background: linear-gradient(0deg,
         rgba(34,193,195,1) 0%,
-        rgba(253,187,45,1) 100%)}
+        rgba(253,187,45,1) 100%)
+}
+
 #ask::after{
         content:attr(data--value);
 }  
@@ -29,60 +33,75 @@ header{text-align: center;
 .radiobtn::after{
         content: attr(data--value);           /* selector for kind of btn */
 }
+
 .updiv{height: 0vw;
         align-items: center;
 }
+
 .lowdiv{
         height: 330px;
         margin-bottom:  20px;
 }
+
 .dialog_div{position: relative;
         height: 100px;
-
-
 }
+
 .play_game{display:flex; 
         height: 25px;
         margin-bottom: 40px;
-        justify-content: center
-        ;
+        justify-content: center;
 }
+
 .parent{display: flex;
-        margin-top: 40vh;
         position: relative;
-        margin-top: 40vh;
-        height:30vh;
+        margin-top: 5vh;
+        height:60vh;
         width: 100vw;
 }
-.child{ 
+
+.child{ display: flex;
+        flex-direction: row;
         border: 20px;
         border-color:  hwb(56 0% 38%);
         border-style:ridge;
         border-radius: 30px;
         width: 70%;
-        height: 58vh;
+        height: 60vh;
         margin-top: 0vh;
         margin-left:10vw;
         background-color: hwb(51 0% 9%);
-        padding: 0;
+        padding-right: 50px;
 }
-.first_row{background-color:  rgb(252, 213, 85);
+
+.leftbox{
+        flex-direction: row;
 }
-.second_row{background-color: rgb(247, 113, 72);
+
+.first_row{ background-color:  rgb(252, 213, 85);
 }
-.third_row{background-color: rgb(248, 187, 95);
+
+.second_row{ background-color: rgb(247, 113, 72);
 }
-#slot1{ over; 
+
+.third_row{ background-color: rgb(248, 187, 95);
+}
+
+#slot1{ height: 200px;
         position: absolute;
         margin: 20px; 
         border: 5px;
         border-color: hwb(56 0% 38%);
-        border-style:ridge}
-.slot{height: 180px;
+        border-style:ridge
+}
+
+.slot{height: 100px;
                 margin: 20px; 
                 border: 5px;
                 border-color: hwb(56 0% 38%);
-                border-style:ridge}
+                border-style:ridge
+}
+
 .slot13{position: absolute;
         height: 170px;
         z-index: 0;
@@ -90,41 +109,50 @@ header{text-align: center;
         border: 5px;
         border-color:  hwb(17 0% 38%);
         border-style:ridge;
-        border-radius: 0px}
-.user_question_form{margin-left: 60%;
-        margin-top: 0px;
-        height: 150px;
-        z-index: 999;    
+        border-radius: 0px
 }
+
+.user_question_form{flex-direction: row;
+        margin-top: 0px; 
+}
+
 #newgamebtn{height: 70px;
         z-index: 999;
 }
+
 #lets_play{display: flex;
         margin-right: 50%;
         text-align: left;
 }
+
 #instructions{display: flex;
         margin-right: 50%;
         text-align:  left;
 }
+
 button{padding: 10px;
         align-content: space-around;
         width: 70px;
         border-radius: 5px;
         background-color: hwb(51 0% 9%);
 }
+
 aside{
         width: 30%;
         padding-left: 15px;
         margin-left: 15px;
         float: right;
 }
+
 .table{ margin-left: 2%;
         height: 360px;
 }
+
 .cpu_question{height: 20px;
                 width: vw;
-                background-color: blueviolet;}
-        @media screen {
+                background-color: blueviolet;
+}
+
+@media screen {
                 
-        }
+}

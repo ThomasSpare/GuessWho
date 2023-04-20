@@ -83,14 +83,14 @@ blaBla(hiddenperson)
 return hiddenperson
 }
 
-let anonymus = string('hiddenperson');  // probably errors bcs wrong type , must not be .jpg
-console.log(anonymus);
+//let anonymus = string('hiddenperson');  // probably errors bcs wrong type , must not be .jpg
+//console.log(anonymus);
 
 
-function makeImageToId(hiddenperson){
-hiddenId = (string(hiddenperson) - ".jpg")
-console.log(hiddenId)   
-}
+// function makeImageToId(hiddenperson){
+//hiddenId = (string(hiddenperson) - ".jpg")
+// console.log(hiddenId)   
+//}
 
 
 

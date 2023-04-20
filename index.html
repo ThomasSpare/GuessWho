@@ -19,118 +19,108 @@
          <br>
          <h1>GUESS WHO</h1>
       </header>
-       <div class="play_game">   
-         <label>Enter username to play</label><br>
-         <input type="text" id="myText"><br>
-         <button type="submit" id="newgamebtn" onclick="renderHiddenImage()">NEW GAME</button><br>
-           <div class="dialog_div">
-              <h1 id="lets play"></h1><br>
-              <p id="instructions"></p>
-           </div>
-       </div>
-       <div style="height: 160px;">
-      
-         <img style="height:fit-content;" id="slot1"/>                 <!-- HiddenCard  -->
-      </div>
-       <div>
-         <section class="user_question_form">
-            <h2>QUESTIONS <button data-type="question" id="ask" inputmode="submit" value="user_ask">ASK?</button> </h2>    <!-- Submit button & Input alt for user Questions-->
-            <div>
-            <input class="btnSex" type="radio" style="background-color: cornflowerblue;" name="sex" value="woman">
-            <label for="woman">A Woman?</label>
-            <input class="btnSex" type="radio" name="sex" value="man">
-            <label for="man">A Man?</label><br>
-            <input class="btnHair" type="radio" name="hair" value="blond">
-            <label for="blond">Have blonde hair?</label>
-            <input class="btnHair" type="radio" name="hair" value="red">
-            <label for="red">Have red hair?</label><br>
-            <input class="btnHair" type="radio" name="hair" value="brown">
-            <label for="brown">Have brown hair?</label>
-            <input class="btnHair" type="radio" name="hair" value="black">
-            <label for="black">Have black hair?</label><br>
-            <input class="btnHairtype" type="radio" name="hairtype" value="short">
-            <label for="shorthair">Have short hair?</label><br>
-            <input class="btnHairtype" type="radio" name="hairtype" value="long">
-            <label for="long hair">Have long hair?</label><br>
-            <input class="btnHairtype" type="radio" name="hairtype" value="no">
-            <label for="nohair">Have no hair?</label><br>
-            <input class="btnMood" type="radio" name="mood" value="happy">
-            <label for="happy">Look happy?</label>
-            <input class="btnMood" type="radio" name="mood" value="angry">
-            <label for="angry">Look angry?</label><br>
-            <input class="btnMood" type="radio" name="mood" value="neutral">
-            <label for="neutral">Look neither happy or angry?</label><br>
-            <input class="btnAge" type="radio" name="age" value="yes">
-            <label for="old">Old?</label>
-            <input class="btnAge" type="radio" name="age" value="no">
-            <label for="notold">Not old?</label><br>
-            <input class="btnGlasses" type="radio" name="glasses" value="yes">
-            <label for="glasses">Have glasses?</label>
-            <input class="btnGlasses" type="radio" name="glasses" value="no">
-            <label for="noglasses">Have no glasses?</label><br>
-            <input class="btnBeard" type="radio" name="beard" value="yes">
-            <label for="beard">Have beard?</label>
-            <input class="btnBeard" type="radio" name="beard" value="no">
-            <label for="nobeard">Have no beard?</label>
-            <button data-type="guess" id="guess" style="margin-left: 20%; background-color: rgb(209, 77, 105);" 
-            value="user_guess">GUESS</button>        <!-- After tapping guess button the user will be promted to click image-->
+            <div class="play_game">   
+               <label>Enter username to play</label><br>
+               <input type="text" id="myText"><br>
+               <button type="submit" id="newgamebtn" onclick="renderHiddenImage()">NEW GAME</button><br>
+                  <div class="dialog_div">
+                     <h1 id="lets play"></h1><br>
+                     <p id="instructions"></p>
+                  </div>
             </div>
-           
-         </section>
-       </div>
-       <div id="lets_play">
-
-       </div>
-       <div id="instructions">
-       </div>
-         
+   <div id="lets_play">
+   </div>
+       
+   <div id="instructions">
+   </div>      
             <div class="parent">
-               <script class="cpu_uestion"></script>                        <!-- CPU questions pops up here-->
-                <div class="child">
-                  
-                   <div class="first_row">
-                     <img class="slot" type="img" id="30"/>
-                     <img class="slot" type="img" id="29"/>
-                     <img class="slot" type="img" id="28"/>
-                     <img class="slot" type="img" id="27"/> 
-                     <img class="slot" type="img" id="26"/>
-                     <img class="slot" type="img" id="25"/>
-                     <img class="slot" type="img" id="24"/>
-                     <img class="slot" type="img" id="23"/>
-                     <img class="slot" type="img" id="22"/>
-                     <img class="slot" type="img" id="21"/>
-                     <span>
-                        
-                     </span>
-                                         
-                   </diV>
-                        <div class="second_row">
-
-                           <img class="slot" type="img" id="20"/>
-                           <img class="slot" type="img" id="19"/>
-                           <img class="slot" type="img" id="18"/>
-                           <img class="slot" type="img" id="17"/> 
-                           <img class="slot" type="img" id="16"/>
-                           <img class="slot" type="img" id="15"/>
-                           <img class="slot" type="img" id="14"/>
-                           <img class="slot" type="img" id="13"/>
-                           <img class="slot" type="img" id="12"/>
-                           <img class="slot" type="img" id="11"/>
-                             
+                           <script class="cpu_uestion"></script>                        <!-- CPU questions pops up here-->
+               <div class="child">
+                  <div class="leftbox">
+                        <div class="first_row">
+                           <img class="slot" type="img" id="30"/>
+                           <img class="slot" type="img" id="29"/>
+                           <img class="slot" type="img" id="28"/>
+                           <img class="slot" type="img" id="27"/> 
+                           <img class="slot" type="img" id="26"/>
+                           <img class="slot" type="img" id="25"/>
+                           <img class="slot" type="img" id="24"/>
+                           <img class="slot" type="img" id="23"/>
+                           <img class="slot" type="img" id="22"/>
+                           <img class="slot" type="img" id="21"/>
                         </div>
-                                 <div class="third_row">
-                                    <img class="slot" type="img" id="10"/>
-                                    <img class="slot" type="img" id="9"/>
-                                    <img class="slot" type="img" id="8"/>
-                                    <img class="slot" type="img" id="7"/>
-                                    <img class="slot" type="img" id="6"/> 
-                                    <img class="slot" type="img" id="5"/>
-                                    <img class="slot" type="img" id="4"/>
-                                    <img class="slot" type="img" id="3"/>
-                                    <img class="slot" type="img" id="2"/>
-                                    <img class="slot" type="img" id="1"/>                           
-                                 </div>
-                </div>         
+                        
+                        <div class="second_row">
+                              <img class="slot" type="img" id="20"/>
+                              <img class="slot" type="img" id="19"/>
+                              <img class="slot" type="img" id="18"/>
+                              <img class="slot" type="img" id="17"/> 
+                              <img class="slot" type="img" id="16"/>
+                              <img class="slot" type="img" id="15"/>
+                              <img class="slot" type="img" id="14"/>
+                              <img class="slot" type="img" id="13"/>
+                              <img class="slot" type="img" id="12"/>
+                              <img class="slot" type="img" id="11"/>                            
+                        </div>
+                        <div class="third_row">
+                              <img class="slot" type="img" id="10"/>
+                              <img class="slot" type="img" id="9"/>
+                              <img class="slot" type="img" id="8"/>
+                              <img class="slot" type="img" id="7"/>
+                              <img class="slot" type="img" id="6"/> 
+                              <img class="slot" type="img" id="5"/>
+                              <img class="slot" type="img" id="4"/>
+                              <img class="slot" type="img" id="3"/>
+                              <img class="slot" type="img" id="2"/>
+                              <img class="slot" type="img" id="1"/>                           
+                        </div>
+                  </div>
+                  <section class="user_question_form">
+                     <h2>QUESTIONS <button data-type="question" id="ask" inputmode="submit" value="user_ask">ASK?</button> </h2>    <!-- Submit button & Input alt for user Questions-->                          
+                     <input class="btnSex" type="radio" style="background-color: cornflowerblue;" name="sex" value="woman">
+                     <label for="woman">A Woman?</label>
+                     <input class="btnSex" type="radio" name="sex" value="man">
+                     <label for="man">A Man?</label><br>
+                     <input class="btnHair" type="radio" name="hair" value="blond">
+                     <label for="blond">Have blonde hair?</label>
+                     <input class="btnHair" type="radio" name="hair" value="red">
+                     <label for="red">Have red hair?</label><br>
+                     <input class="btnHair" type="radio" name="hair" value="brown">
+                     <label for="brown">Have brown hair?</label>
+                     <input class="btnHair" type="radio" name="hair" value="black">
+                     <label for="black">Have black hair?</label><br>
+                     <input class="btnHairtype" type="radio" name="hairtype" value="short">
+                     <label for="shorthair">Have short hair?</label><br>
+                     <input class="btnHairtype" type="radio" name="hairtype" value="long">
+                     <label for="long hair">Have long hair?</label><br>
+                     <input class="btnHairtype" type="radio" name="hairtype" value="no">
+                     <label for="nohair">Have no hair?</label><br>
+                     <input class="btnMood" type="radio" name="mood" value="happy">
+                     <label for="happy">Look happy?</label>
+                     <input class="btnMood" type="radio" name="mood" value="angry">
+                     <label for="angry">Look angry?</label><br>
+                     <input class="btnMood" type="radio" name="mood" value="neutral">
+                     <label for="neutral">Look neither happy or angry?</label><br>
+                     <input class="btnAge" type="radio" name="age" value="yes">
+                     <label for="old">Old?</label>
+                     <input class="btnAge" type="radio" name="age" value="no">
+                     <label for="notold">Not old?</label><br>
+                     <input class="btnGlasses" type="radio" name="glasses" value="yes">
+                     <label for="glasses">Have glasses?</label>
+                     <input class="btnGlasses" type="radio" name="glasses" value="no">
+                     <label for="noglasses">Have no glasses?</label><br>
+                     <input class="btnBeard" type="radio" name="beard" value="yes">
+                     <label for="beard">Have beard?</label>
+                     <input class="btnBeard" type="radio" name="beard" value="no">
+                     <label for="nobeard">Have no beard?</label>
+                     <button data-type="guess" id="guess" style="margin-left: 20%; background-color: rgb(209, 77, 105);" 
+                     value="user_guess">GUESS</button>
+                           <div>
+                              <img id="slot1"/>          <!-- HiddenCard  -->
+                           </div>
+               </section>                 
+               </div>
+                         
             </div>                   
           <div class="lowdiv">
             <img class="table" src="assets/images/graphics/table_surface.jpg" alt="table surface"> 
