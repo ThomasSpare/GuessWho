@@ -17,8 +17,9 @@ footer{height: 120px;
 }
 
 header{text-align: center;
-        min-width: 100vw;
-        height:100px;
+        border-width: 4px;
+        border-color: black;
+        height:10vh;
         margin-top: 0px;
         background: rgb(34,193,195);
         background: linear-gradient(0deg,
@@ -43,13 +44,11 @@ header{text-align: center;
         margin-bottom:  20px;
 }
 
-.dialog_div{position: relative;
-        height: 100px;
-}
+
 
 .play_game{display:flex; 
         height: 25px;
-        margin-bottom: 40px;
+        margin-top: 0vh;
         justify-content: center;
 }
 
@@ -112,23 +111,60 @@ header{text-align: center;
         border-radius: 0px
 }
 
+
+
+
+/*------------------------------------------------Header & dialog */
+
 .user_question_form{flex-direction: row;
         margin-top: 0px; 
 }
 
-#newgamebtn{height: 70px;
+#newgamebtn {
+        
+        font-family: 'Peralta';
+        font-size: small;
+        margin-left:;
+        height: 40px;
         z-index: 999;
+}   
+
+#mytext {
+        margin-bottom: 0;
 }
 
-#lets_play{display: flex;
-        margin-right: 50%;
-        text-align: left;
+#instructions{
+        font-size: medium;
+        display: block;
+        text-align: center;
 }
 
-#instructions{display: flex;
-        margin-right: 50%;
-        text-align:  left;
+.play_game {
+        margin-top: 0;
+        height: 40px;
 }
+
+.dialog_div{
+        align-content: center;
+        display: flex;
+        position: fixed;
+        height: 40px;
+}
+.lets_play {
+        margin-left: 20vw;
+        display: inline-block;
+        margin-top: 0px;
+}
+#letsplay {margin-top: 0px;}
+
+.info{
+        display: inline-block;
+}
+
+
+
+/*------------------------------------------------ */
+
 
 button{padding: 10px;
         align-content: space-around;

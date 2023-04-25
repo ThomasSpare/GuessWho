@@ -11,10 +11,11 @@ newGameButton.addEventListener("click", function(){
     if (userName === ""){
     alert('Please enter a username');
   } 
-    else console.log("Lets play", userName);
-      document.getElementById("lets play").innerHTML = "Lets play " + userName +" !";
+    else console.log("Letsplay", userName);
+      document.getElementById("letsplay").innerHTML = "Lets play " + userName +" !";
       document.getElementById("instructions").innerHTML =
-  "The goal of the game is to guess who the person is behind the hidden card.<br>You only have One guess<br> Choose a question and hit ASK to get more clues";
+  "  The goal of the game is to guess who the person is behind the hidden card. 
+  <br>  You only have One guess. Choose a question and hit ASK to get more clues";
 });
   //const guessButton = document.getElementById("guess")
   //guessButton.addEventListener("click", guessHiddenPerson())
