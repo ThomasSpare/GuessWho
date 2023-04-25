@@ -13,9 +13,7 @@ newGameButton.addEventListener("click", function(){
   } 
     else console.log("Letsplay", userName);
       document.getElementById("letsplay").innerHTML = "Lets play " + userName +" !";
-      document.getElementById("instructions").innerHTML =
-  "  The goal of the game is to guess who the person is behind the hidden card. 
-  <br>  You only have One guess. Choose a question and hit ASK to get more clues";
+      document.getElementById("instructions").innerHTML ="    The goal of the game is to guess who the person is behind the hidden card.<br>    You only have One guess. Choose a question and hit ASK to get more clues";
 });
   //const guessButton = document.getElementById("guess")
   //guessButton.addEventListener("click", guessHiddenPerson())

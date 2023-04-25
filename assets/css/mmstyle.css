@@ -19,7 +19,7 @@ footer{height: 120px;
 header{text-align: center;
         border-width: 4px;
         border-color: black;
-        height:10vh;
+        height:8vh;
         margin-top: 0px;
         background: rgb(34,193,195);
         background: linear-gradient(0deg,
@@ -54,7 +54,7 @@ header{text-align: center;
 
 .parent{display: flex;
         position: relative;
-        margin-top: 5vh;
+        margin-top: 8vh;
         height:60vh;
         width: 100vw;
 }
@@ -124,7 +124,6 @@ header{text-align: center;
         
         font-family: 'Peralta';
         font-size: small;
-        margin-left:;
         height: 40px;
         z-index: 999;
 }   
@@ -134,9 +133,8 @@ header{text-align: center;
 }
 
 #instructions{
+        font-family: 'Peralta', cursive;
         font-size: medium;
-        display: block;
-        text-align: center;
 }
 
 .play_game {
@@ -148,17 +146,23 @@ header{text-align: center;
         align-content: center;
         display: flex;
         position: fixed;
-        height: 40px;
+        height: 60px;
 }
 .lets_play {
         margin-left: 20vw;
-        display: inline-block;
+        display:inline-flex;
         margin-top: 0px;
 }
-#letsplay {margin-top: 0px;}
+#letsplay {
+        font-family: 'Peralta', cursive;
+        font-size: large;
+        margin-top: 0px;}
 
-.info{
-        display: inline-block;
+.info{ 
+
+        color: rgb(37, 37, 0);
+        display: inline-flex;
+        margin-top: 2px;
 }
 
 
