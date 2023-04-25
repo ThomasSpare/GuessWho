@@ -16,7 +16,8 @@ footer{height: 120px;
         position:static;
 }
 
-header{text-align: center;
+header{ font-family: 'Peralta', cursive;
+        text-align: center;
         border-width: 4px;
         border-color: black;
         height:8vh;
@@ -77,13 +78,13 @@ header{text-align: center;
         flex-direction: row;
 }
 
-.first_row{ background-color:  rgb(252, 213, 85);
+.first_row{ background-color:  rgb(247, 113, 72);
 }
 
 .second_row{ background-color: rgb(247, 113, 72);
 }
 
-.third_row{ background-color: rgb(248, 187, 95);
+.third_row{ background-color: rgb(247, 113, 72);
 }
 
 #slot1{ height: 200px;
@@ -95,7 +96,7 @@ header{text-align: center;
 }
 
 .slot{height: 100px;
-                margin: 20px; 
+                margin: 2px; 
                 border: 5px;
                 border-color: hwb(56 0% 38%);
                 border-style:ridge
@@ -116,19 +117,12 @@ header{text-align: center;
 
 /*------------------------------------------------Header & dialog */
 
-.user_question_form{flex-direction: row;
-        margin-top: 0px; 
-}
-
 #newgamebtn {
-        
-        font-family: 'Peralta';
-        font-size: small;
         height: 40px;
         z-index: 999;
 }   
 
-#mytext {
+#mytext {margin: 5px;
         margin-bottom: 0;
 }
 
@@ -154,7 +148,6 @@ header{text-align: center;
         margin-top: 0px;
 }
 #letsplay {
-        font-family: 'Peralta', cursive;
         font-size: large;
         margin-top: 0px;}
 
@@ -165,10 +158,38 @@ header{text-align: center;
         margin-top: 2px;
 }
 
+/*------------------------------------------------ questions & hiddencard box */
 
 
-/*------------------------------------------------ */
+.user_question_form{
+        font-family: 'Peralta', cursive;
+        margin-top: -20px;
+        margin-left: 5px; 
+}
 
+
+#hiddencard_info {
+        font-family: 'Peralta', cursive;
+        font-size: medium;
+        margin-bottom: 0px;
+}
+
+.hiddencard_box {
+        display: flex;
+}
+
+.hiddencard_info {
+        background-color: rgba(96, 97, 43, 0.384);
+        display: flex;
+        flex-direction: column-reverse;
+        width: 170px;
+        height: 300px;
+        padding: 5px;
+}
+
+.user_question_form label {
+        font-size: small;
+}
 
 button{padding: 10px;
         align-content: space-around;
