@@ -20,7 +20,7 @@ header{ font-family: 'Peralta', cursive;
         text-align: center;
         border-width: 4px;
         border-color: black;
-        height:8vh;
+        height:12vh;
         margin-top: 0px;
         background: rgb(34,193,195);
         background: linear-gradient(0deg,
@@ -48,7 +48,7 @@ header{ font-family: 'Peralta', cursive;
 
 
 .play_game{display:flex; 
-        height: 25px;
+        height: 30px;
         margin-top: 0vh;
         justify-content: center;
 }
@@ -122,8 +122,9 @@ header{ font-family: 'Peralta', cursive;
         z-index: 999;
 }   
 
-#mytext {margin: 5px;
-        margin-bottom: 0;
+#mytext {height: 20px
+        padding: 0px;
+       
 }
 
 #instructions{
@@ -145,17 +146,18 @@ header{ font-family: 'Peralta', cursive;
 .lets_play {
         margin-left: 20vw;
         display:inline-flex;
-        margin-top: 0px;
+        margin-top: 10px;
 }
 #letsplay {
         font-size: large;
-        margin-top: 0px;}
+        margin-top: 14px;}
 
 .info{ 
 
         color: rgb(37, 37, 0);
         display: inline-flex;
-        margin-top: 2px;
+        margin-top: 14px;
+        margin-left: 18px;
 }
 
 /*------------------------------------------------ questions & hiddencard box */
