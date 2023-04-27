@@ -17,7 +17,7 @@
       <header>    
          <h1>GUESS WHO</h1>      
             <div class="play_game">   
-               <label>Enter a username to play...  </label>
+               <label>Enter a username to play...  </label>    <!-- Username input and new game button  -->
                <input type="text" id="myText">
                <button type="submit" id="newgamebtn" onclick="renderHiddenImage()">NEW GAME</button>
          
@@ -30,11 +30,10 @@
             
             </div> 
          </header>     
-            <div class="parent">
-                           <script class="cpu_uestion"></script>                        <!-- CPU questions pops up here-->
+            <div class="parent">  
                <div class="child">
                   <div class="leftbox">
-                        <div class="first_row">
+                        <div class="first_row">                      <!---All Images first row -->
                            <img class="slot" type="img" id="30"/>
                            <img class="slot" type="img" id="29"/>
                            <img class="slot" type="img" id="28"/>
@@ -47,7 +46,7 @@
                            <img class="slot" type="img" id="21"/>
                         </div>
                         
-                        <div class="second_row">
+                        <div class="second_row">                         <!---All Images Second row -->
                               <img class="slot" type="img" id="20"/>
                               <img class="slot" type="img" id="19"/>
                               <img class="slot" type="img" id="18"/>
@@ -59,7 +58,7 @@
                               <img class="slot" type="img" id="12"/>
                               <img class="slot" type="img" id="11"/>                            
                         </div>
-                        <div class="third_row">
+                        <div class="third_row">                         <!---All Images third row -->
                               <img class="slot" type="img" id="10"/>
                               <img class="slot" type="img" id="9"/>
                               <img class="slot" type="img" id="8"/>
@@ -73,10 +72,10 @@
                         </div>
                   </div>
                   <section class="user_question_form">
-                     <h2>QUESTIONS <button data-type="question" id="ask" inputmode="submit" value="user_ask">ASK?</button> </h2>    <!-- Submit button & Input alt for user Questions-->                          
+                     <h2>QUESTIONS <button data-type="question" id="ask" inputmode="submit" >ASK?</button> </h2>    <!-- Submit button & user Questions-->                          
                      <input class="btnSex" type="radio" style="background-color: cornflowerblue;" name="sex" value="woman">
                      <label for="woman">A Woman?</label><br>
-                     <input class="btnSex" type="radio" name="sex" value="man">
+                     <input class="btnSex" type="radio" name="sex" value="man">                    <!-- radio buttons for questions -->
                      <label for="man">A Man?</label><br>
                      <input class="btnHair" type="radio" name="hair" value="blond">
                      <label for="blond">Have blonde hair?</label><br>
@@ -113,7 +112,8 @@
                      <br>
                      <br>
                      <button data-type="guess" id="guess" style="margin-left: 20%; background-color: rgb(209, 77, 105);" 
-                     value="user_guess">GUESS</button>
+                     value="user_guess">GUESS</button>                                                               <!--Guess button, when clicked USER gets prompted
+                                                                                                                              to click on one of the boardcards -->
                </section> 
                <div class="hiddencard_box">
                   <img  id="slot1"/>          <!-- HiddenCard  -->

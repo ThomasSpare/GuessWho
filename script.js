@@ -55,6 +55,18 @@ const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glas
             ]
 
 
+            
+const askValue = document.querySelector(".btnSex, btnHair.");
+const askButton = document.querySelector("#ask");
+askButton.addEventListener("click", console.log(askValue));
+
+
+function ask() {
+console.log(askButton.value)
+}
+
+
+
 
 let sexVal = document.querySelector('input[name="sex"]:checked')         // Input of property from radio buttons 
 let hairVal = document.querySelector('input[name="hair"]:checked')
@@ -64,7 +76,10 @@ let ageVal = document.querySelector('input[name="age"]:checked')
 let glassesVal = document.querySelector('input[name="glasses"]:checked')
 let beardVal = document.querySelector('input[name="beard"]:checked')
 
+function Question(){
 
+
+}
 
 
 
