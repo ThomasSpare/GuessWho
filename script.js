@@ -55,18 +55,20 @@ const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glas
             ]
 
 
-            
-const askValue = document.querySelector(".btnSex, btnHair.");
 const askButton = document.querySelector("#ask");
-askButton.addEventListener("click", console.log(askValue));
+askButton.addEventListener('clicked', => (askButton.value = True)
+)
 
+console.log(askButton.value);
 
-function ask() {
-console.log(askButton.value)
+const askValue = document.querySelector('body > div.parent > div > section > input:nth-child(5)')
+            if (askButton = True){
+                alert("question asked is if hiddenperson is a "+ askValue.value);            
 }
 
 
 
+askButton.addEventListener("click", console.log(askValue.value));
 
 let sexVal = document.querySelector('input[name="sex"]:checked')         // Input of property from radio buttons 
 let hairVal = document.querySelector('input[name="hair"]:checked')
@@ -93,9 +95,9 @@ selected_image = hiddenpeople[random_index]
 document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
 let hiddenperson = selected_image
 console.log(hiddenperson)
-blaBla(hiddenperson)
 return hiddenperson
 }
+
 
 //let anonymus = string('hiddenperson');  // probably errors bcs wrong type , must not be .jpg
 //console.log(anonymus);
