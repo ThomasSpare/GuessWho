@@ -60,11 +60,15 @@ const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glas
 
 
 document.addEventListener('change', (e) => {
+
    const question = e;
    console.log(question)
 });
 
 
+let sexVal = document.querySelector('input[name="sex"]:checked').value
+  if sexVal = 'checked'
+then let sexVal =  
 
 //askButton.addEventListener('clicked', => (askButton.value = True)
 //)
