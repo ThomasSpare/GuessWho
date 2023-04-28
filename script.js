@@ -55,15 +55,16 @@ const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glas
             ]
 
 
-function questionAsked(event){
-  console.log(event.value);
-}
+
 //            console.log(question.prop.value);
 
 
-//askButton.addEventListener('change', (e) => {
-//  console.log(askButton(prop, value))
-// });
+document.addEventListener('change', (e) => {
+   const question = e;
+   console.log(question)
+});
+
+
 
 //askButton.addEventListener('clicked', => (askButton.value = True)
 //)
