@@ -55,20 +55,27 @@ const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glas
             ]
 
 
-const askButton = document.querySelector("#ask");
-askButton.addEventListener('clicked', => (askButton.value = True)
-)
-
-console.log(askButton.value);
-
-const askValue = document.querySelector('body > div.parent > div > section > input:nth-child(5)')
-            if (askButton = True){
-                alert("question asked is if hiddenperson is a "+ askValue.value);            
+function questionAsked(event){
+  console.log(event.value);
 }
+//            console.log(question.prop.value);
+
+
+//askButton.addEventListener('change', (e) => {
+//  console.log(askButton(prop, value))
+// });
+
+//askButton.addEventListener('clicked', => (askButton.value = True)
+//)
+
+//const askValue = document.querySelector('body > div.parent > div > section > input:nth-child(5)')
+//            if (askButton = True){
+//                alert("question asked is if hiddenperson is a "+ askValue.value);            
+//}
 
 
 
-askButton.addEventListener("click", console.log(askValue.value));
+//askButton.addEventListener("click", console.log(askValue.value));
 
 let sexVal = document.querySelector('input[name="sex"]:checked')         // Input of property from radio buttons 
 let hairVal = document.querySelector('input[name="hair"]:checked')
@@ -79,9 +86,10 @@ let glassesVal = document.querySelector('input[name="glasses"]:checked')
 let beardVal = document.querySelector('input[name="beard"]:checked')
 
 function Question(){
-
-
 }
+
+
+
 
 
 
@@ -94,7 +102,6 @@ function renderHiddenImage(){                                                   
 selected_image = hiddenpeople[random_index]
 document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
 let hiddenperson = selected_image
-console.log(hiddenperson)
 return hiddenperson
 }
 
@@ -117,14 +124,14 @@ return hiddenperson
 //}
 
 function renderBoardImages(Array){
-   for (var i = 1; i <= 30; ++i){
-   index = (30 - i);
+   for (var i = 0; i <= 29; ++i){
+   index = (29 - i);
    selected_image = hiddenpeople[index];
-   console.log(index);
    document.getElementById(index).src =`/assets/images/characters/${selected_image}`
  }}
 
 renderBoardImages(hiddenpeople);
+
 
 
 
@@ -278,7 +285,6 @@ function renderImages() {
 }
 }
 
-console.log("Hej");
 
 //
 
