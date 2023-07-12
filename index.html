@@ -19,7 +19,7 @@
             <div class="play_game">   
                <label>Enter a username to play...  </label>    <!-- Username input and new game button  -->
                <input type="text" id="myText">
-               <button type="submit" id="newgamebtn" onclick="renderHiddenImage()">NEW GAME</button>
+               <button type="submit" id="newgamebtn" onclick="renderHiddenImage(), changeStyle()">NEW GAME</button>
          
             </div>
                <div class="dialog_div">
@@ -112,7 +112,7 @@
                   </div>  
                         <br>
                         <br>
-                        <button type="submit" id="guess" style="margin-left: 20%; background-color: rgb(209, 77, 105);" 
+                        <button type="submit" id="guess" onclick="guessCard()"
                         value="submit">GUESS</button>                                                               <!--Guess button, when clicked USER gets prompted
                                                                                                                                  to click on one of the boardcards -->
  

@@ -61,9 +61,9 @@ document.addEventListener('change', (e) => {
 });
 
 
-let sexVal = document.querySelector('input[name="sex"]:checked').value
-  if sexVal = 'checked'
-then let sexVal =  
+// let sexVal = document.querySelector('input[name="sex"]:checked').value
+//   if sexVal = 'checked'
+// then let sexVal =  
 
 
 
@@ -82,14 +82,43 @@ function Question(){
 hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg',
                '16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','30.jpg']
 
-              
+
+
 function renderHiddenImage(){                                                     // On new game button click random hidden card is generated
   random_index = Math.floor(Math.random() * hiddenpeople.length);
-selected_image = hiddenpeople[random_index]
-document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
-let hiddenperson = selected_image
-return hiddenperson
+  selected_image = hiddenpeople[random_index]
+  let person = document.getElementById('slot1')
+  document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
+  let hiddenperson = selected_image
+    return hiddenperson;
+}   
+
+function changeStyle(){                                // Makes hidden card invisible when pressing new game button
+  var element = document.getElementById("slot1");
+  element.style.display = "none"
 }
+
+var images = document.getElementsByTagName("img");
+
+const imgPressed = e => {
+  console.log(e.target.id + ".jpg");  // Get ID of Clicked Element
+}
+
+for (let image of images) {
+  image.addEventListener("click", imgPressed);
+}
+
+const guessbutton = document.getElementById("guess");
+
+function guessCard(){
+  guessbutton.addEventListener("click", imgPressed);
+}
+
+const imgGuessed = e => {
+  console.log(e.target.name);  // Get name of Clicked Element
+}
+
+
 
 
 

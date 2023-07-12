@@ -28,6 +28,11 @@ header{ font-family: 'Peralta', cursive;
         rgba(253,187,45,1) 100%)
 }
 
+#guess{                        /* guess button */
+        margin-left: 20%; 
+        background-color: rgb(209, 77, 105);
+}
+
 #ask::after{
         content:attr(data--value);
 }  
