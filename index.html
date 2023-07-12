@@ -70,9 +70,13 @@
                               <img class="slot" type="img" id="1"/>
                               <img class="slot" type="img" id="0"/>                           
                         </div>
+                        <button type="submit" id="guess" onclick="guessCard(), guessPerson()"
+                        value="submit">GUESS WHO !</button>  <!--Guess button, when clicked USER gets prompted to click on one of the boardcards -->
+                        <br><h2>Hit the button then click on the one you think it is<br>You only have one chance</h2>
                   </div>
+                
                   <div id="user_question_form">
-                        <h2>QUESTIONS <button type="submit" id="ask" >ASK?</button> </h2>    <!-- Submit button & user Questions-->                          
+                        <h2>QUESTIONS <button type="submit" id="ask" onclick="elementGetbyType()">ASK?</button> </h2>    <!-- Submit button & user Questions-->                          
                            <input class="btnSex" type="radio" id="woman" name="sex" value="woman">
                            <label for="woman">A Woman?</label><br>
                            <input class="btnSex" type="radio" id="man" name="sex" value="man">                    <!-- radio buttons for questions -->
@@ -112,15 +116,12 @@
                   </div>  
                         <br>
                         <br>
-                        <button type="submit" id="guess" onclick="guessCard()"
-                        value="submit">GUESS</button>                                                               <!--Guess button, when clicked USER gets prompted
-                                                                                                                                 to click on one of the boardcards -->
- 
                <div class="hiddencard_box">
                   <img  id="slot1"/>          <!-- HiddenCard  -->
                   <br>
                   <h6 class="hiddencard_info" id="hiddencard_info">START BY ASKING A QUESTION</h6>   <!--- JS info under hiddencard -->
-               </div>            
+               </div> 
+                                                                                       
                </div>
                          
             </div>                   

@@ -83,8 +83,20 @@ hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg',
                '16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','30.jpg']
 
 
+var elementTypeSelector = document.querySelectorAll('input[type=radio]');
 
-function renderHiddenImage(){                                                     // On new game button click random hidden card is generated
+function radioButtonRelease(){
+  function elementGetbyType(){
+   alert("The HTML element input type text contains " + elementTypeSelector[0].value);
+  }
+}
+
+var elementTypeSelector = document.querySelectorAll('input');
+console.log(elementTypeSelector[0].target, elementTypeSelector[1].target, elementTypeSelector[2].target, elementTypeSelector[3].target);
+
+
+
+function renderHiddenImage(){                                      // On new game button click random hidden card is generated
   random_index = Math.floor(Math.random() * hiddenpeople.length);
   selected_image = hiddenpeople[random_index]
   let person = document.getElementById('slot1')
@@ -100,7 +112,7 @@ function getFilename(fullPath) {                    //  Returns the img filename
 
 
 
-function changeStyle(){                                // Makes hidden card invisible when pressing new game button
+function changeStyle(){                             // Makes hidden card invisible when pushing new game button
   var element = document.getElementById("slot1");
   var sheet = document.createElement('style')
   sheet.innerHTML = "#slot1{filter: brightness(0%);}";
@@ -108,19 +120,24 @@ function changeStyle(){                                // Makes hidden card invi
 }
 
 
+// USERGUESS AND HIDDENCARD FUNCTIONS
+// When user click on boardcards the selected cards name is returned as userguess (*.jpg)
+// This lets us compare to the hiddencard (x.jpg)
 
-var images = document.getElementsByTagName("img");
+// CLICKED CARD
+var images = document.getElementsByTagName("img"); 
 
 const imgPressed = e => {
   console.log(e.target.id + ".jpg");
   var userguess = (e.target.id + ".jpg");
-    return userguess   // The card that the user clicked after guess button
+    return userguess   // The card the user clicks after pushed the guess button
 }
-
 for (let image of images) {
-  image.addEventListener("click", imgPressed);
+  image.addEventListener("click", imgPressed, guessPerson);
 }
 
+
+// USERGUESS
 const guessbutton = document.getElementById("guess");
 
 function guessCard(){
@@ -130,6 +147,9 @@ function guessCard(){
 const imgGuessed = e => {
   console.log(e.target.name);  // Get name of Clicked Element
 }
+
+//------ 
+
 
 
 function renderBoardImages(Array){
@@ -144,7 +164,7 @@ renderBoardImages(hiddenpeople);
 
 
 function guessPerson(){
-    if (userguess = guessimage)
+    if (imgGuessed = renderHiddenImage)      // When clicked guess who the first card clicked after 
       alert('Its Correct!');
     else
       alert('GAME OVER');
