@@ -88,20 +88,33 @@ function renderHiddenImage(){                                                   
   random_index = Math.floor(Math.random() * hiddenpeople.length);
   selected_image = hiddenpeople[random_index]
   let person = document.getElementById('slot1')
-  document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
-  let hiddenperson = selected_image
-    return hiddenperson;
-}   
+  let hiddencard = document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
+  hiddencard = (getFilename(hiddencard));
+  console.log(hiddencard);
+    return hiddencard;
+}
+
+function getFilename(fullPath) {                    //  Returns the img filename without the path 
+  return fullPath.replace(/^.*[\\\/]/, '');
+}
+
+
 
 function changeStyle(){                                // Makes hidden card invisible when pressing new game button
   var element = document.getElementById("slot1");
-  element.style.display = "none"
+  var sheet = document.createElement('style')
+  sheet.innerHTML = "#slot1{filter: brightness(0%);}";
+  document.body.appendChild(sheet);
 }
+
+
 
 var images = document.getElementsByTagName("img");
 
 const imgPressed = e => {
-  console.log(e.target.id + ".jpg");  // Get ID of Clicked Element
+  console.log(e.target.id + ".jpg");
+  var userguess = (e.target.id + ".jpg");
+    return userguess   // The card that the user clicked after guess button
 }
 
 for (let image of images) {
@@ -119,9 +132,6 @@ const imgGuessed = e => {
 }
 
 
-
-
-
 function renderBoardImages(Array){
    for (var i = 0; i <= 29; ++i){
    index = (29 - i);
@@ -134,7 +144,7 @@ renderBoardImages(hiddenpeople);
 
 
 function guessPerson(){
-    if (selected_image = guessimage)
+    if (userguess = guessimage)
       alert('Its Correct!');
     else
       alert('GAME OVER');
@@ -149,7 +159,9 @@ function ask(){
 
 
 
-let person = 
+
+
+
 function filteredPeople(){
 const filteredpeople = people.filter(value => value.sex === 'man');
   people.filter(person => {
