@@ -8,6 +8,7 @@
     <meta name="description" content="Guess Who">
     <meta name="keywords" content="Guess game, Guess who, game">
     <title>Guess Who Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/mmstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,7 @@
       <header>    
          <h1>GUESS WHO</h1>      
             <div class="play_game">   
-               <label>Enter a username to play...  </label>    <!-- Username input and new game button  -->
+               <label for="myText">Enter a username to play...  </label>    <!-- Username input and new game button  -->
                <input type="text" id="myText">
                <button type="submit" id="newgamebtn" onclick="renderHiddenImage(), changeStyle()">NEW GAME</button>
          
@@ -70,49 +71,59 @@
                               <img class="slot" type="img" id="1"/>
                               <img class="slot" type="img" id="0"/>                           
                         </div>
-                        <button type="submit" id="guess" onclick="guessCard(), guessPerson()"
+                        <button type="submit" id="guess" onclick="guessPerson()"
                         value="submit">GUESS WHO !</button>  <!--Guess button, when clicked USER gets prompted to click on one of the boardcards -->
                         <br><h2>Hit the button then click on the one you think it is<br>You only have one chance</h2>
+                        <h3 id="guess_who"></h3>
                   </div>
                 
                   <div id="user_question_form">
-                        <h2>QUESTIONS <button type="submit" id="ask" onclick="elementGetbyType()">ASK?</button> </h2>    <!-- Submit button & user Questions-->                          
-                           <input class="btnSex" type="radio" id="woman" name="sex" value="woman">
+                     <form>
+                        <fieldset>
+                        <h2>QUESTIONS</h2> 
+                        <div> 
+                        <button type="submit" onclick="radioChecked()">ASK?</button>   <!-- Submit button & user Questions-->
+                        </div>
+                        <div>                         
+                           <input class="btnSex" type="radio" id="sex" name="radio" value="woman">
                            <label for="woman">A Woman?</label><br>
-                           <input class="btnSex" type="radio" id="man" name="sex" value="man">                    <!-- radio buttons for questions -->
+                           <input class="btnSex" type="radio" id="sex" name="radio" value="man">                    <!-- radio buttons for questions -->
                            <label for="man">A Man?</label><br>
-                           <input class="btnHair" type="radio" id="blond" name="hair" value="blond">
+                           <input class="btnHair" type="radio" id="hair" name="radio" value="blond">
                            <label for="blond">Have blonde hair?</label><br>
-                           <input class="btnHair" type="radio" id="red" name="hair" value="red">
+                           <input class="btnHair" type="radio" id="hair" name="radio" value="red">
                            <label for="red">Have red hair?</label><br>
-                           <input class="btnHair" type="radio" id="brown" name="hair" value="brown">
+                           <input class="btnHair" type="radio" id="hair" name="radio" value="brown">
                            <label for="brown">Have brown hair?</label><br>
-                           <input class="btnHair" type="radio" id="black" name="hair" value="black">
+                           <input class="btnHair" type="radio" id="hair" name="radio" value="black">
                            <label for="black">Have black hair?</label><br>
-                           <input class="btnHairtype" type="radio" id="short" name="hairtype" value="short">
+                           <input class="btnHairtype" type="radio" id="hairtype" name="radio" value="short">
                            <label for="short">Have short hair?</label><br>
-                           <input class="btnHairtype" type="radio" id="long" name="hairtype" value="long">
+                           <input class="btnHairtype" type="radio" id="hairtype" name="radio" value="long">
                            <label for="long">Have long hair?</label><br>
-                           <input class="btnHairtype" type="radio" id="nohair" name="hairtype" value="no">
+                           <input class="btnHairtype" type="radio" id="hairtype" name="radio" value="no">
                            <label for="nohair">Have no hair?</label><br>
-                           <input class="btnMood" type="radio" id="happy" name="mood" value="happy">
+                           <input class="btnMood" type="radio" id="mood" name="radio" value="happy">
                            <label for="happy">Look happy?</label><br>
-                           <input class="btnMood" type="radio" id="angry" name="modd" value="angry">
+                           <input class="btnMood" type="radio" id="mood" name="radio" value="angry">
                            <label for="angry">Look angry?</label><br>
-                           <input class="btnMood" type="radio" id="neutral" name="mood" value="neutral">
+                           <input class="btnMood" type="radio" id="mood" name="radio" value="neutral">
                            <label for="neutral">Look neutral?</label><br>
-                           <input class="btnAge" type="radio" id="old" name="old" value="yes">
+                           <input class="btnAge" type="radio" id="age" name="radio" value="yes">
                            <label for="old">Old?</label><br>
-                           <input class="btnAge" type="radio" id="notold" name="old" value="no">
+                           <input class="btnAge" type="radio" id="age" name="radio" value="no">
                            <label for="notold">Not old?</label><br>
-                           <input class="btnGlasses" type="radio" id="glasses" name="glasses" value="yes">
+                           <input class="btnGlasses" type="radio" id="glasses" name="radio" value="yes">
                            <label for="glasses">Have glasses?</label><br>
-                           <input class="btnGlasses" type="radio" id="noglasses" name="glasses" value="no">
+                           <input class="btnGlasses" type="radio" id="glasses" name="radio" value="no">
                            <label for="noglasses">Have no glasses?</label><br>
-                           <input class="btnBeard" type="radio" id="beard" name="beard" value="yes">
+                           <input class="btnBeard" type="radio" id="beard" name="radio" value="yes">
                            <label for="beard">Have beard?</label><br>
-                           <input class="btnBeard" type="radio" id="nobeard" name="beard" value="no">
+                           <input class="btnBeard" type="radio" id="beard" name="radio" value="no">
                            <label for="nobeard">Have no beard?</label>
+                        </div>
+                        </fieldset>
+                     </form>
                   </div>  
                         <br>
                         <br>
@@ -128,10 +139,12 @@
           <div class="lowdiv">
             <img class="table" src="assets/images/graphics/table_surface.jpg" alt="table surface"> 
           </div>
-       <footer>
-       </footer>
-      
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+          crossorigin="anonymous">
+         </script>
        <script>document.getElementById("letsplay").innerHTML = ""</script>
+       <script>document.getElementById("guess_who").innerHTML = ""</script>
        <script src="script.js"></script>  
     </body>
 </html>

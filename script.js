@@ -17,6 +17,7 @@ newGameButton.addEventListener("click", function(){
 });
 
 
+
 // This Array consist of all the people on the Cards with 7 properties (and one img property) and values
 
 const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glasses: 'no', age:'no', beard: 'no', img: 'assets/images/characters/1.jpg'},
@@ -57,7 +58,6 @@ const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glas
 document.addEventListener('change', (e) => {
 
    const question = e;
-   console.log(question)
 });
 
 
@@ -83,18 +83,57 @@ hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg',
                '16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','30.jpg']
 
 
-var elementTypeSelector = document.querySelectorAll('input[type=radio]');
 
-function radioButtonRelease(){
-  function elementGetbyType(){
-   alert("The HTML element input type text contains " + elementTypeSelector[0].value);
-  }
+//----------  RADIOBUTTONS
+
+// Function that check what button was selected when submitting form 
+// and its value and id 
+
+const radioChecked = e => {
+  let radioButtons = document.getElementsByName('radio');
+  for (let radio of radioButtons) {
+     if (radio.checked) {
+      document.getElementById("instructions").innerHTML = "The radio button is selected and it's value is " + radio.value + " and its id is " + radio.id;
+      console.log("A radio button is selected and it's value is " + radio.value + " and its id is " + radio.id);
+      let questionProp = radio.id;
+      let questionVal = radio.value;
+      const filteredPeople = filterPeople(people, {
+         [questionProp]: questionVal,
+    });
+    filteredPeople.forEach(person => {                  // 
+      const values = Object.values(person);
+      const ValuesWithoutImg = values.filter((value, index) =>{
+      const props = Object.keys(person);
+        return props[index] === 'img';
+      });
+      console.log(ValuesWithoutImg);
+    });
+}};
 }
 
-var elementTypeSelector = document.querySelectorAll('input');
-console.log(elementTypeSelector[0].target, elementTypeSelector[1].target, elementTypeSelector[2].target, elementTypeSelector[3].target);
 
 
+// FilterFunction with filters{ questionProp: questionVal }
+
+function filterPeople(people, filters) {
+  return people.filter(person => {
+    return Object.entries(filters).every(([prop, value]) => {
+      return person[prop] === value;
+    });
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+// -----------------
 
 function renderHiddenImage(){                                      // On new game button click random hidden card is generated
   random_index = Math.floor(Math.random() * hiddenpeople.length);
@@ -113,43 +152,51 @@ function getFilename(fullPath) {                    //  Returns the img filename
 
 
 function changeStyle(){                             // Makes hidden card invisible when pushing new game button
-  var element = document.getElementById("slot1");
+  var element = document.getElementById("");
   var sheet = document.createElement('style')
   sheet.innerHTML = "#slot1{filter: brightness(0%);}";
   document.body.appendChild(sheet);
 }
 
+function fadeStyle(){                          // Makes cards with selected features fade when pushing ask button
+  var element = document.getElementsByName('slot');
+  var sheet = document.createElement('style')
+  sheet.innerHTML = "#slot{filter: brightness(20%);}";
+  document.body.appendChild(sheet);
+}
 
 // USERGUESS AND HIDDENCARD FUNCTIONS
 // When user click on boardcards the selected cards name is returned as userguess (*.jpg)
 // This lets us compare to the hiddencard (x.jpg)
 
 // CLICKED CARD
-var images = document.getElementsByTagName("img"); 
+var images = document.querySelectorAll('img');
 
 const imgPressed = e => {
-  console.log(e.target.id + ".jpg");
   var userguess = (e.target.id + ".jpg");
-    return userguess   // The card the user clicks after pushed the guess button
+  console.log(userguess);
+  //guessPerson(userguess);
+  // The card the user clicks after pushed the guess button
 }
+
 for (let image of images) {
-  image.addEventListener("click", imgPressed, guessPerson);
+  image.addEventListener("click", imgPressed);
 }
 
 
 // USERGUESS
 const guessbutton = document.getElementById("guess");
 
-function guessCard(){
-  guessbutton.addEventListener("click", imgPressed);
+var images = document.querySelectorAll('img');
+gueessBtn = document.getElementById("guess");
+gueessBtn.addEventListener('click', function(){
+
+  if (gueessBtn = "clicked"){
+  images.forEach(function(image) {
+    image.addEventListener('click', imgPressed(image));
+});
 }
-
-const imgGuessed = e => {
-  console.log(e.target.name);  // Get name of Clicked Element
-}
-
-//------ 
-
+})
 
 
 function renderBoardImages(Array){
@@ -163,12 +210,15 @@ renderBoardImages(hiddenpeople);
 
 
 
-function guessPerson(){
-    if (imgGuessed = renderHiddenImage)      // When clicked guess who the first card clicked after 
-      alert('Its Correct!');
+function guessPerson(userguess, hiddencard){
+    if (userguess= hiddencard){      // When clicked guess who the first card clicked after 
+      document.getElementById("guess").innerHTML ='Its Correct!';
+      }
     else
-      alert('GAME OVER');
+    {
+    document.getElementById("guess").innerHTML ='GAME OVER';
   }
+}
 
 
 
@@ -181,56 +231,6 @@ function ask(){
 
 
 
-
-function filteredPeople(){
-const filteredpeople = people.filter(value => value.sex === 'man');
-  people.filter(person => {
-    return person[prop] === value;
-  })                               // filter people function
-console.table(filteredpeople);
-}
-// Nu har du filteredpeople som output ex alla 'män'
-
-
-
-class AudioController {
-  constructor() {
-      this.bgMusic = new Audio('assets/sounds/backgr_music.wav');
-      this.flipSound = new Audio('');
-      this.matchSound = new Audio('');
-      this.victorySound = new Audio('');
-      this.gameOverSound = new Audio('');
-      this.bgMusic.volume = 0.5;
-      this.bgMusic.loop = true;
-  }
-
-  startMusic() {
-    this.bgMusic.play();
-  }
-
-startMusic() {
-    this.bgMusic.play();
-}
-stopMusic() {
-    this.bgMusic.pause();
-    this.bgMusic.currentTime = 0;
-}
-flip() {
-    this.flipSound.play();
-}
-match() {
-    this.matchSound.play();
-}
-victory() {
-    this.stopMusic();
-    this.victorySound.play();
-}
-gameOver() {
-    this.stopMusic();
-    this.gameOverSound.play();
-}
-
-}
 
 
 function releaseNameButton(){
@@ -259,13 +259,3 @@ function renderImages() {
 }
 }
 
-
-//
-
-
-function filterPeople(prop,val){                      
-  console.log();
-  return people.filter((hair) => {
-    return people[hair] === 'blond'
-    })
-}
