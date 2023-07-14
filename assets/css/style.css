@@ -9,6 +9,16 @@ body{
         min-width: 100vw; 
 }
 
+.fade{
+        filter: brightness(0.1);
+        height: 100px;
+        margin: 2px; 
+        border: 5px;
+        border-color: hwb(56 0% 38%);
+        border-style:ridge;
+        border-radius: 10%;
+        filter: drop-shadow(2px 4px 6px black);
+}
 footer{ 
         height: 120px;
         min-width: 100vw;
@@ -30,7 +40,6 @@ header{
         rgba(34,193,195,1) 0%,
         rgba(253,187,45,1) 100%)
 }
-
 
 /*Text & headlines */
 
@@ -150,7 +159,12 @@ button{
         border-color: hwb(56 0% 38%);
         border-style:ridge;
         border-radius: 10%;
+        filter: drop-shadow(2px 4px 6px black);
 }
+
+.mystyle{
+        filter: brightness(0.2)
+      }
 
 .slot13{
         position: absolute;
@@ -168,7 +182,7 @@ button{
 
 /*------------------------------------------------Header & dialog */
 
-#mytext {height: 20px
+#mytext {height: 20px;
         padding: 0px;
        
 }
