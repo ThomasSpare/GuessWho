@@ -97,7 +97,7 @@ function filterPeople(people, filters) {
 
 function renderHiddenImage(){                                      
   random_index = Math.floor(Math.random() * hiddenpeople.length);
-  selected_image = hiddenpeople[random_index - 1]
+  selected_image = hiddenpeople[random_index]
   let person = document.getElementById('slot1')
   let hiddencard = document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
   hiddencard = (getFilename(hiddencard));
@@ -110,7 +110,7 @@ function renderHiddenImage(){
 function StripImg(fullPath) {                       //  Returns the array ValuesWithoutImg as only ID numbers (eg. 3, 12, 29 ) 
   let ValueId = fullPath.replace(/^.*[\\\/]/, '');
   ValueId = removeExtension(ValueId);
-  if (ValueId < 29){
+  if (ValueId <= 30){
     const MyList = document.getElementById("card" + ValueId );    // str "card" is added for each id passed and added to classList 
     console.log(MyList);
     MyList.classList.remove('slot');
@@ -185,10 +185,10 @@ gueessBtn.addEventListener('click', function(){
 
 if (newGameButton, "click"){
 function renderBoardImages(Array){
-   for (var i = 0; i <= 29; ++i){
-   index = (29 - i);
+   for (var i = 1; i <= 29; ++i){
+   index = (30 - i);
    selected_image = hiddenpeople[index];
-   document.getElementById("card" + index).src =`/assets/images/characters/${selected_image}`
+   document.getElementById("card" + (index + 1)).src =`/assets/images/characters/${selected_image}`
  }}}
  else{
   // do nothing
