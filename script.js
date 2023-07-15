@@ -108,9 +108,11 @@ function renderHiddenImage(){
 function StripImg(fullPath) {                       //  Returns the array ValuesWithoutImg as only ID numbers (eg. 3, 12, 29 ) 
   let ValueId = fullPath.replace(/^.*[\\\/]/, '');
   ValueId = removeExtension(ValueId);
-  if (ValueId != null){
+  if (ValueId < 29){
     const MyList = document.getElementById("card" + ValueId );    // str "card" is added for each id passed and added to classList 
-    MyList.classList.toogle('fade'); 
+    console.log(MyList);
+    MyList.classList.toggle('slot');
+    MyList.classList.add('fade');
     console.log(MyList.classList);                                 // Each card is added the class fade which dims brightness
   }
   else{
@@ -195,15 +197,25 @@ renderBoardImages(hiddenpeople);
 }
 else{
   document.getElementById("instructions").innerHTML = "You asked if " + radio.id + " is " + radio.value;
+  setTimeout();
+  
 }
 
 
 function guessPerson(userguess, hiddencard){
     if (userguess= hiddencard){      // When clicked guess who the first card clicked after 
       document.getElementById("guess").innerHTML ='Its Correct!';
+      setTimeout();
       }
     else
     {
     document.getElementById("guess").innerHTML ='GAME OVER';
+    setTimeout();
   }
 }
+
+var delayInMilliseconds = 2000; //1 second
+
+setTimeout(function() {
+  // do nothing
+}, delayInMilliseconds);
