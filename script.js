@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+    });
 
 const newGameButton = document.getElementById("newgamebtn")              // At load of page player will get prompted to enter a username
 const someString = "Username";                                         // If blank alert enter username
@@ -50,7 +53,6 @@ hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg',
                '16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','30.jpg']
 
 
-
 //----------  RADIOBUTTONS
 
 // Function that check what button was selected when submitting form 
@@ -68,7 +70,7 @@ const radioChecked = e => {
       const filteredPeople = filterPeople(people, {
          [questionProp]: questionVal,
     });
-    filteredPeople.forEach(person => {                  // 
+    filteredPeople.forEach(person => {                 
       const values = Object.values(person);
       const ValuesWithoutImg = values.filter((value, index) =>{
       const props = Object.keys(person);
@@ -95,7 +97,7 @@ function filterPeople(people, filters) {
 
 function renderHiddenImage(){                                      
   random_index = Math.floor(Math.random() * hiddenpeople.length);
-  selected_image = hiddenpeople[random_index]
+  selected_image = hiddenpeople[random_index + 1]
   let person = document.getElementById('slot1')
   let hiddencard = document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
   hiddencard = (getFilename(hiddencard));
@@ -111,7 +113,7 @@ function StripImg(fullPath) {                       //  Returns the array Values
   if (ValueId < 29){
     const MyList = document.getElementById("card" + ValueId );    // str "card" is added for each id passed and added to classList 
     console.log(MyList);
-    MyList.classList.toggle('slot');
+    MyList.classList.remove('slot');
     MyList.classList.add('fade');
     console.log(MyList.classList);                                 // Each card is added the class fade which dims brightness
   }
@@ -196,26 +198,23 @@ if (newGameButton, "click"){
 renderBoardImages(hiddenpeople);
 }
 else{
-  document.getElementById("instructions").innerHTML = "You asked if " + radio.id + " is " + radio.value;
-  setTimeout();
   
 }
+
+function innerHtml(){
+  document.getElementById("instructions").innerHTML = "You asked if " + radio.id + " is " + radio.value;
+}
+
 
 
 function guessPerson(userguess, hiddencard){
     if (userguess= hiddencard){      // When clicked guess who the first card clicked after 
       document.getElementById("guess").innerHTML ='Its Correct!';
-      setTimeout();
+ 
       }
     else
     {
     document.getElementById("guess").innerHTML ='GAME OVER';
-    setTimeout();
   }
 }
 
-var delayInMilliseconds = 2000; //1 second
-
-setTimeout(function() {
-  // do nothing
-}, delayInMilliseconds);

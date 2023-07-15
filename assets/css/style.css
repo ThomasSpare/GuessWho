@@ -18,6 +18,10 @@ body{
         border-style:ridge;
         border-radius: 10%;
         filter: drop-shadow(2px 4px 6px black);
+        opacity: 50;
+        -webkit-transition: opacity 0.15s linear;
+        -o-transition: opacity 0.15s linear;
+        transition: opacity 0.15s linear;
 }
 
 footer{ 
