@@ -1,6 +1,6 @@
 # GUESS WHO GAME
 ---
-![Guess who game](assets/images/screenshots/main.png)
+![Guess who game](https://github.com/ThomasSpare/GuessWho/blob/Guess-who-version-2/assets/images/screenshots/main2.png)
 
 
 Guess who is a game I've often played with my kids.
@@ -109,7 +109,7 @@ The live link can be found here -
 
 I had 17 red errors from my Jigsaw test
 - Error coming from me altering css bootstrap error
-![Guess who game](assets/images/screenshots/jigsaw.png)
+![Guess who game]([assets/images/screenshots/jigsaw.png](https://github.com/ThomasSpare/GuessWho/blob/Guess-who-version-2/assets/images/screenshots/jigsaw.png))
 I needed to change the bootstrap css to make my site work.
 
 ## validator.w3
