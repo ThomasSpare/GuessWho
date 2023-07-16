@@ -147,9 +147,6 @@ function removeExtension(filename) {
   return filename.substring(0, filename.lastIndexOf('.')) || filename;
 
 }
-
-
-
 // USERGUESS AND HIDDENCARD FUNCTIONS
 // When user click on boardcards the selected cards name is returned as userguess (*.jpg)
 // This lets us compare to the hiddencard (x.jpg)
@@ -208,13 +205,13 @@ function innerHtml(){
 
 
 function guessPerson(userguess, hiddencard){
-    if (userguess= hiddencard){      // When clicked guess who the first card clicked after 
+    if (str(userguess) === str(hiddencard)){      // When clicked guess who the first card clicked after 
       document.getElementById("guess").innerHTML ='Its Correct!';
- 
       }
     else
     {
+      console.log(hiddencard);
+      console.log(userguess);
     document.getElementById("guess").innerHTML ='GAME OVER';
-  }
+    }
 }
-
