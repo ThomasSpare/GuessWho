@@ -97,7 +97,7 @@ function renderHiddenImage(){
   random_index = Math.floor(Math.random() * hiddenpeople.length);
   selected_image = hiddenpeople[random_index]
   let person = document.getElementById('slot1')
-  let hiddencard = document.getElementById('slot1').src =`//assets/images/characters/${selected_image}`
+  let hiddencard = document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
   hiddencard = (getFilename(hiddencard));
   return hiddencard, person;
 
@@ -181,7 +181,7 @@ function renderBoardImages(Array){
    for (var i = 1; i <= 29; ++i){
    index = (30 - i);
    selected_image = hiddenpeople[index];
-   document.getElementById("card" + (index + 1)).src =`//assets/images/characters/${selected_image}`
+   document.getElementById("card" + (index + 1)).src =`/assets/images/characters/${selected_image}`
  }}}
  else{
   // do nothing
