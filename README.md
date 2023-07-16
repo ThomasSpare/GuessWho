@@ -116,7 +116,7 @@ I needed to change the bootstrap css to make my site work.
 
 Is showing a lot of errors when testing site.
 Many has this error
-" <img class="slot" type="img" id="card30"/> " 
+img class="slot" type="img" id="card30"/>  
 But I am using this code in order to inject images to the slots. So the img
 should not have any source in my case.
 
