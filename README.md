@@ -85,7 +85,7 @@ The sources for this issues was:
 - Bootstrap button override with CSS
 - solution: copy into 'fade' classlist css
 #### Source 2:
-- <form></form> was used around the radio buttons
+- tag: form was used around the radio buttons
 solution: Remove form tags
 #### Source 3:
 - button has type="submit"
