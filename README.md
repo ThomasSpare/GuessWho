@@ -106,8 +106,19 @@ The live link can be found here -
 ## Testing
 
 ## W3C Jigsaw
+
+I had 17 red errors from my Jigsaw test
 - Error coming from me altering css bootstrap error
-![Guess who game](assets/images/screenshots/main.png)
+![Guess who game](assets/images/screenshots/jigsaw.png)
+I needed to change the bootstrap css to make my site work.
+
+## validator.w3
+
+Is showing a lot of errors when testing site.
+Many has this error
+<img class="slot" type="img" id="card30"/>↩ 
+But I am using this code in order to inject images to the slots. So the img
+should not have any source in my case.
 
 
 ## The filterPeople function
@@ -117,6 +128,7 @@ have had regular meetings with advised and showed me the filter.array function t
 project and from the outset it didn´t look very complicated. This function was so crucial to get the work moving forward. 
 The filter people function was the key that should filter my people array to trigger different actions with the cards. 
 The filter.people function is marked in comments in script.js.
+
 
 
 ### Media
