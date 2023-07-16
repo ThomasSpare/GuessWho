@@ -28,14 +28,6 @@ body{
         transition: opacity 0.15s linear;
 }
 
-footer{ 
-        height: 120px;
-        min-width: 100vw;
-        margin-top: 8vh;
-        bottom: 0px; 
-        background-color:  rgb(32, 23, 10);
-        position:static;
-}
 
 header{ 
         font-family: 'Peralta', cursive;
