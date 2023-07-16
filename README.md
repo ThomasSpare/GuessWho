@@ -72,16 +72,38 @@ complemented with alt text also.
 
 ---
 
-# Debugging, showHiddenCard() and innerHTML
-The Html and CSS code in general is fully functional without errors. I have used Visual studio error code messages as guide to javascript code.
-The errors showing up are from images that are passed with innerHTML between script.js and index.html using the function showHiddenCard(). 
-Somehow the array I created of images for this function dont show up in the browser. This function should shuffle a random card from 
-the 30 persons avaiable at each press on the new game button. 
-The hidden card is changing value to different persons in the console for each new game button push, but dont show up in browser.
+# Debugging
 
-### Changing img file name
-My last attempt to debugg the game was to change all the img file names in the image folder from file names with space between into filenames with
-underscore. I suspected this was the reason why images did not show up in the hidden card slot.
+###
+For a long time I could not get the cards to dissapear when asking a question about the hidden card with the radio buttons.
+I used classlist in stripImg() on the selected cards to make them dissapear from the board.
+The cards would flash for a moment then return to original state again.
+
+The sources for this issues was:
+
+#### Source 1:
+- Bootstrap button override with CSS
+- solution: copy into 'fade' classlist css
+#### Source 2:
+- <form></form> was used around the radio buttons
+solution: Remove form tags
+#### Source 3:
+- button has type="submit"
+- solution: remove type="submit"
+
+### Unfixed Bugs
+- The quess button dont work. When pressed the button should compare a user click on a crad to the hiddecard
+  if its the same card user wins, if not the user is game over.
+- The ask function should compare the asked for traits to the hiddencard traits and inform the user
+  if the hidden card has the asked for traits.
+
+### Deploying the website to GitHub Pages:
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+- In the GitHub repository, navigate to the Settings tab
+- From the source section drop-down menu, select the Master Branch
+- Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found here -
 
 ## Testing
 I have tried functions and code snippets in javatutor and various other code testers.
@@ -89,7 +111,7 @@ I have for each step or new function used google dev tools and console.logs to s
 the reason and fix them. I also in the end tried using the vs code editors debugging function to see the bug better but could not make it work.
 No performed W3c Validator test or lighthouse testing yet since I dont have a fully functional game yet.
 
-## The filter.people function
+## The filterPeople function
 
 I have in code comments left reference to functions I have learned from youtube and other sources. My mentor Brian O'hare, who I 
 have had regular meetings with advised and showed me the filter.array function that I could use. Making arrays was the key to this 
@@ -97,8 +119,13 @@ project and from the outset it didn´t look very complicated. This function was 
 The filter people function was the key that should filter my people array to trigger different actions with the cards. 
 The filter.people function is marked in comments in script.js.
 
-# To be continued
-As this game is not fully functional yet I dont expect to get a pass, so I continue and will present the end result very soon.
 
+### Media
+- The images in the website including gallery and background are taken from [dreamstime.com](https://www.dreamstime.com/)
+
+  ### Thank You
+- to my mentor @Brian O,hare for supporting me with his feedback through the entire project
+- to Tutor support of Code Institute
+- to Code Institute and Slack community for helping me when I was getting stuck with some challenges.
 
 ---
