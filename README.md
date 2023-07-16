@@ -20,12 +20,10 @@ pile of cards, the player can at anytime guess by hitting the guess button and p
 one of the cards showing people. The player has one guess, then its game over.
 
 ---
-## Game Functionality 
+## Game Functionality
 
-Unfortunatly I did´nt get the game to function properly in time for submission.
-The amount to learn about manipulating arrays and different methods and new functions to display
-images etc across the DOM took alot of time. I almost pulled it together and with a couple of days
-I could make it run as planned.
+The game still needs to be improved as to work as intended. The guess button is not operational yet and should
+determine win or game over when the user pushes it and make a guess. 
 
 ---
 
@@ -106,10 +104,11 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 The live link can be found here -
 
 ## Testing
-I have tried functions and code snippets in javatutor and various other code testers.
-I have for each step or new function used google dev tools and console.logs to see if the code passed and tried to find
-the reason and fix them. I also in the end tried using the vs code editors debugging function to see the bug better but could not make it work.
-No performed W3c Validator test or lighthouse testing yet since I dont have a fully functional game yet.
+
+## W3C Jigsaw
+- Error coming from me altering css bootstrap error
+![Guess who game](assets/images/screenshots/main.png)
+
 
 ## The filterPeople function
 
