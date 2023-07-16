@@ -2,15 +2,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-const newGameButton = document.getElementById("newgamebtn")              // At load of page player will get prompted to enter a username
-const someString = "Username";                                         // If blank alert enter username
+const newGameButton = document.getElementById("newgamebtn")        // At load of page player will get prompted to enter a username
+const someString = "Username";                                     // If blank alert enter username
 
 newGameButton.addEventListener("click", function(){
-  var userName = document.getElementById("myText").value;             // Username input, display instructions when press play
+  var userName = document.getElementById("myText").value;         // Username input, display instructions when press play
     if (userName === ""){
     alert('Please enter a username');
   } 
-    else console.log("Letsplay", userName);
       document.getElementById("letsplay").innerHTML = "Lets play " + userName +" !";
       document.getElementById("instructions").innerHTML ="    The goal of the game is to guess who the person is behind the hidden card.<br>    You only have One guess. Choose a question and hit ASK to get more clues";
 });
@@ -55,8 +54,8 @@ hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg',
 
 //----------  RADIOBUTTONS
 
-// Function that check what button was selected when submitting form 
-// and its value and id 
+// Function that checks what button was selected when submitting form 
+// and its value and id ..that is ( value and prop )
 
 const radioChecked = e => {
   
@@ -64,7 +63,6 @@ const radioChecked = e => {
   for (let radio of radioButtons) {
      if (radio.checked) {
       document.getElementById("instructions").innerHTML = "You asked if " + radio.id + " is " + radio.value;
-      console.log("You asked if " + radio.id + " is " + radio.value);
       let questionProp = radio.id;
       let questionVal = radio.value;
       const filteredPeople = filterPeople(people, {
@@ -101,7 +99,6 @@ function renderHiddenImage(){
   let person = document.getElementById('slot1')
   let hiddencard = document.getElementById('slot1').src =`/assets/images/characters/${selected_image}`
   hiddencard = (getFilename(hiddencard));
-  console.log(hiddencard);
   return hiddencard, person;
 
 }
@@ -112,10 +109,8 @@ function StripImg(fullPath) {                       //  Returns the array Values
   ValueId = removeExtension(ValueId);
   if (ValueId <= 30){
     const MyList = document.getElementById("card" + ValueId );    // str "card" is added for each id passed and added to classList 
-    console.log(MyList);
     MyList.classList.remove('slot');
     MyList.classList.add('fade');
-    console.log(MyList.classList);                                 // Each card is added the class fade which dims brightness
   }
   else{
     // do nothing
@@ -124,7 +119,7 @@ function StripImg(fullPath) {                       //  Returns the array Values
 
 
 function changeStyle(){  
-  const element = document.querySelector("#slot1");    // Makes hidden card invisible when pushing new game button
+  const element = document.querySelector("#slot1");    // Makes hidden card blacked out when pushing new game button
   var sheet = document.createElement('style')
   sheet.innerHTML = "#slot1{filter: brightness(0%);}";
   document.body.appendChild(sheet);
@@ -139,7 +134,7 @@ function getFilename(fullPath) {                    //  Returns the img filename
 
 
 
-function addSpace(str) {                // adds a space between valueId as this is needed to use with innerHTML 
+function addSpace(str) {                // adds a space between valueId as this is needed to use with some innerHTML 
   return str.split('').join(' ');
 }
 
@@ -147,6 +142,7 @@ function removeExtension(filename) {
   return filename.substring(0, filename.lastIndexOf('.')) || filename;
 
 }
+
 // USERGUESS AND HIDDENCARD FUNCTIONS
 // When user click on boardcards the selected cards name is returned as userguess (*.jpg)
 // This lets us compare to the hiddencard (x.jpg)
@@ -156,7 +152,7 @@ var images = document.querySelectorAll('img');
 
 const imgPressed = e => {
   var userguess = (e.target.id + ".jpg");
-  console.log(userguess);
+  console.log(userguess);                  // This is console logged to show clicked cards id
   //guessPerson(userguess);
   // The card the user clicks after pushed the guess button
 }
@@ -210,8 +206,6 @@ function guessPerson(userguess, hiddencard){
       }
     else
     {
-      console.log(hiddencard);
-      console.log(userguess);
     document.getElementById("guess").innerHTML ='GAME OVER';
     }
 }
