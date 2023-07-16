@@ -1,6 +1,6 @@
 # GUESS WHO GAME
 ---
-![Guess who game](assets/images/graphics/GUESSWHO2.jpg)
+![Guess who game](assets/images/screenshots/main2.png)
 
 
 Guess who is a game I've often played with my kids.
