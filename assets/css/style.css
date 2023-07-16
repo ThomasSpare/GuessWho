@@ -1,4 +1,8 @@
-
+/* General */
+html{
+        overflow-x: hidden;
+        width: fit-content;
+        }
 body{
         margin: 0;
         background: rgb(34,193,195);
@@ -75,7 +79,7 @@ button{
 }
 
 #newgamebtn{
-        width: 120px;
+        width: 150px;
         height: 40px;
         z-index: 999;
 }
@@ -276,6 +280,112 @@ aside{
                 background-color: blueviolet;
 }
 
-@media screen {
+        @media screen and (max-width: 1024px){
+
+        }
+        
+        @media screen and (max-width: 1024px){
+                body > div.parent > div{
+                        height:max-content;
+                        margin-top: 20%;
+                }
+                h6,
+                h3{
+                        font-size: medium;
+                }
+                .lets_play {
+                        margin-left: 2vw;
+                        display: inline-flex;
+                        margin-top: 10px;
+                        position: absolute;
+                    }
+                #instructions {
+                font-family: 'Peralta', cursive;
+                font-size: medium;
+                margin-top: 78px;
+                }
+                    
+        }
+        
+        
+        
+        
+        @media screen and (max-width: 768px){
+                body > div.parent > div{
+                        height:max-content;
+                        margin-top: 20%;
+                        margin-left: 2%;
+                        
+                }
+                .hiddencard_box {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        align-content: space-between;
+                        align-items: baseline;
+                    }
+                    #slot1 {
+                        height: 153px;
+                        position: absolute;
+                        margin: 20px;
+                        border: 5px;
+                        border-color: hwb(56 0% 38%);
+                        border-style: ridge;
+                        border-radius: 10%;
+                        margin-top: 28px;
+                    }
+                    .h2, h2 {
+                        font-size: calc(1.325rem + .3vw);
+                    }
+        }
+
+        @media screen and (max-width: 425px){
+                .slot{
+                      height:50px;
+                      height: 87px;
+
+                }
+                body > div.parent > div{
+                        height:max-content;
+                        margin-top: 20%;
+                        width: fit-content;
+                }
+                #user_question_form {
+                        width: 154px;
+                        display: flex;
+                        flex-direction: row;
+                }
                 
+                h2{
+                        font-size: medium;
+                }
+                #user_question_form {
+                        width: 150px;
+                        display: flex;
+                        flex-direction: column;
+                        margin: 16px;
+                    }
+                #letsplay {
+                        font-size: medium;
+                        margin-top: 30px;
+                        margin-left: 18px;
+                    }
+                #newgamebtn {
+                width: 173px;
+                height: 68px;
+                z-index: 999;
+                }
+                #guess {
+                        margin-left: 20%;
+                        background-color: rgb(209, 77, 105);
+                        width: 200px;
+                        margin: 20px;
+                }
+                #instructions {
+                        font-family: 'Peralta', cursive;
+                        font-size: small;
+                        margin-top: 59px;
+                        margin-right: 131px;
+                    
+                    }
 }
