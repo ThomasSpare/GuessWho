@@ -13,6 +13,10 @@ body{
         min-width: 100vw; 
 }
 
+body > header > h1{
+        margin-top: 20px;
+}
+
 .fade{
         filter: brightness(0.1);
         height: 100px;
@@ -190,7 +194,7 @@ button{
 
 #instructions{
         font-family: 'Peralta', cursive;
-        font-size: xx-large;
+        font-size: large;
         margin-top: 50px;
 }
 
@@ -226,10 +230,11 @@ button{
 /*------------------------------------------------ questions & hiddencard box */
 
 
-.user_question_form{
+#user_question_form{
         font-family: 'Peralta', cursive;
         margin-top: -20px;
-        margin-left: 5px; 
+        margin-left: 5px;
+        margin: 20px; 
 }
 
 
@@ -250,10 +255,6 @@ button{
         width: 170px;
         height: 300px;
         padding: 5px;
-}
-
-.user_question_form label {
-        font-size: small;
 }
 
 aside{
