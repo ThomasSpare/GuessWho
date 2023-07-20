@@ -190,7 +190,7 @@ button{
 
 #instructions{
         font-family: 'Peralta', cursive;
-        font-size: medium;
+        font-size: xx-large;
         margin-top: 50px;
 }
 
@@ -292,9 +292,10 @@ aside{
                         position: absolute;
                     }
                 #instructions {
-                font-family: 'Peralta', cursive;
-                font-size: medium;
-                margin-top: 78px;
+                        font-family: 'Peralta', cursive;
+                        font-size: x-large;
+                        margin-top: 93px;
+                        margin-left: 10%;
                 }
                     
         }
@@ -311,10 +312,11 @@ aside{
                 }
                 .hiddencard_box {
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: row-reverse;
                         flex-wrap: nowrap;
-                        align-content: space-between;
-                        align-items: baseline;
+                        align-content: center;
+                        align-items: flex-start;
+                        justify-content: center;
                     }
                     #slot1 {
                         height: 153px;
@@ -329,33 +331,81 @@ aside{
                     .h2, h2 {
                         font-size: calc(1.325rem + .3vw);
                     }
+                    .leftbox{
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        align-items: center;
+                        justify-content: flex-start;
+                    }
         }
 
         @media screen and (max-width: 425px){
+                
+                body > header > div.play_game > label{
+                        font-size: smaller;
+                        width: 70px;
+                        margin-left: 20px;
+                }
+                body > header > h1{
+                        font-size: calc(1.375rem + 3.5vw);
+                        margin-right: 121px;
+                        margin-top: 10px;    
+                }
+                #myText{
+                        margin: 0;
+                        font-family: inherit;
+                        font-size: inherit;
+                        line-height: inherit;
+                        width: 128px;
+                        z-index: 999;
+                }
+                .parent{
+                        display: flex;
+                        position: relative;
+                        margin-top: 27vh;
+                        height: 60vh;
+                        width: 100vw;
+                }
+                .play_game{
+                        height: max-content;
+                        margin-top: 20%;
+                        width: 534px;
+                }
                 .slot{
-                      height:50px;
-                      height: 87px;
+                        height: 50px;
+                        height: 104px;
+                        margin: 0;
+                        border: 3px;
+                        border-color: hwb(56 0% 38%);
+                        border-style: ridge;
+                        border-radius: 10%;
+                        filter: drop-shadow(2px 4px 6px black);
 
                 }
-                body > div.parent > div{
-                        height:max-content;
+                body > div.parent > div{ 
+                        height: max-content;
                         margin-top: 20%;
-                        width: fit-content;
+                        width: 534px;
                 }
                 #user_question_form {
-                        width: 154px;
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
+                        margin: 4px;
+                        flex-wrap: wrap;
+                        font-size: x-small;
                 }
                 
                 h2{
                         font-size: medium;
                 }
                 #user_question_form {
-                        width: 150px;
                         display: flex;
                         flex-direction: column;
-                        margin: 16px;
+                        margin: 4px;
+                        flex-wrap: wrap;
+                        font-size: x-small;
                     }
                 #letsplay {
                         font-size: medium;
@@ -363,9 +413,10 @@ aside{
                         margin-left: 18px;
                     }
                 #newgamebtn {
-                width: 173px;
-                height: 68px;
-                z-index: 999;
+                        width: 173px;
+                        height: 68px;
+                        z-index: 999;
+                        margin-right: 124px;
                 }
                 #guess {
                         margin-left: 20%;
@@ -375,9 +426,8 @@ aside{
                 }
                 #instructions {
                         font-family: 'Peralta', cursive;
-                        font-size: small;
-                        margin-top: 59px;
-                        margin-right: 131px;
-                    
+                        font-size: medium;
+                        margin-top: 73px;
+                        margin-right: 276px;
                     }
 }

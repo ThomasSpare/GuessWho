@@ -47,14 +47,15 @@ const people = [ {hair: 'blond', hairtype: 'short',sex:'man', mood:'angry', glas
               {hair: 'brown', hairtype: 'long', sex: 'woman', mood: 'happy', glasses: 'no', age:'no', beard: 'no', img: './assets/images/characters/29.jpg'},
               {hair: 'blond', hairtype: 'long', sex: 'woman', mood: 'angry', glasses: 'no', age:'no', beard: 'no', img: './assets/images/characters/30.jpg'}
             ]
-            https://github.com/ThomasSpare/GuessWho/blob/Main
+           
 hiddenpeople =['1.jpg', '2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','14.jpg','15.jpg',
                '16.jpg','17.jpg','18.jpg','19.jpg','20.jpg','21.jpg','22.jpg','23.jpg','24.jpg','25.jpg','26.jpg','27.jpg','28.jpg','29.jpg','30.jpg']
 
 
+
 //----------  RADIOBUTTONS
 
-// Function that checks what button was selected when submitting form 
+// Function that checks what button was selected when user push ask button 
 // and its value and id ..that is ( value and prop )
 
 const radioChecked = e => {
@@ -76,7 +77,7 @@ const radioChecked = e => {
       });
       ValuesWithoutImg.forEach(element => StripImg(element));   // Function executes a provided function once for each array element
     });
-}};
+  }};
 }
 
 
@@ -92,6 +93,9 @@ function filterPeople(people, filters) {
 
 
 // ----- On new game button click random hidden Guess Who card is generated
+var userguess = userguess;
+var hiddencard = renderHiddenImage();
+
 
 function renderHiddenImage(){                                      
   random_index = Math.floor(Math.random() * hiddenpeople.length);
@@ -99,24 +103,58 @@ function renderHiddenImage(){
   let person = document.getElementById('slot1')
   let hiddencard = document.getElementById('slot1').src =`./assets/images/characters/${selected_image}`
   hiddencard = (getFilename(hiddencard));
+  console.log(hiddencard);
   return hiddencard, person;
-
 }
 
-
-function StripImg(fullPath) {                       //  Returns the array ValuesWithoutImg as only ID numbers (eg. 3, 12, 29 ) 
-  let ValueId = fullPath.replace(/^.*[\\\/]/, '');
-  ValueId = removeExtension(ValueId);
-  if (ValueId <= 30){
-    const MyList = document.getElementById("card" + ValueId );    // str "card" is added for each id passed and added to classList 
-    MyList.classList.remove('slot');
-    MyList.classList.add('fade');
+function guessPerson(){                                           
+  document.getElementById("guess").innerHTML ='Click on who you think it is';
+  var img_src = document.getElementById("slot1").src;
+  img_src = ("card" + getFilename(img_src));
+  console.log(img_src.toString());                      // Guess function: The player first clicks on the person he/she thinks it is
+  console.log(userguess.toString());                    // Then clicks the button to confirm if the guess is correct
+    if (userguess.toString() === img_src.toString())    // The result win or lose is declared and the hiddencard is displayed to the user
+    {
+    document.getElementById("guess").innerHTML ='Its correct ! You win !';
+    var sheet = document.createElement('style')
+    sheet.innerHTML = "#slot1{filter: brightness(100%);}";
+    document.body.appendChild(sheet);
+    }
+    else
+    {
+    document.getElementById("guess").innerHTML ='Sorry wrong guess ! You lose !';
+    var sheet = document.createElement('style')
+    sheet.innerHTML = "#slot1{filter: brightness(100%);}";
+    document.body.appendChild(sheet);
+    }
   }
-  else{
-    // do nothing
-  }                                          // Add style to selected Cards
-}
 
+
+
+
+function StripImg(fullPath) {
+  var img_src = document.getElementById("slot1").src;
+  img_src = ("card" + getFilename(img_src));
+  let ValueId = fullPath.replace(/^.*[\\\/]/, '');
+  ValueId = removeExtension(ValueId);                       //  Returns the array ValuesWithoutImg as only ID numbers (eg. 3, 12, 29 )
+  console.log(ValueId);
+  console.log(img_src);
+    if (("card" + ValueId + ".jpg").toString() === (img_src.toString()))
+    {
+    document.getElementById("instructions").innerHTML = "The Hidden Card has this Attribute !";
+    return img_src;
+    }
+    else
+    {  
+    if (ValueId <= 30){
+      const MyList = document.getElementById("card" + ValueId );    // str "card" is added for each id passed and added to classList 
+      MyList.classList.remove('slot');
+      MyList.classList.add('fade');
+    }
+    else{
+      // do nothing
+    }                                        
+}}
 
 function changeStyle(){  
   const element = document.querySelector("#slot1");    // Makes hidden card blacked out when pushing new game button
@@ -128,7 +166,7 @@ function changeStyle(){
 
 // ----  Utils  ---------------
 
-function getFilename(fullPath) {                    //  Returns the img filename without the path 
+function getFilename(fullPath) {              //  Returns the img filename without the path 
   return fullPath.replace(/^.*[\\\/]/, '');
 }
 
@@ -150,11 +188,12 @@ function removeExtension(filename) {
 // CLICKED CARD
 var images = document.querySelectorAll('img');
 
-const imgPressed = e => {
-  var userguess = (e.target.id + ".jpg");
-  console.log(userguess);                  // This is console logged to show clicked cards id
-  //guessPerson(userguess);
-  // The card the user clicks after pushed the guess button
+let imgPressed = e => {
+  userguess = (e.target.id + ".jpg")
+  console.log(userguess);
+  return userguess;
+  // This is console logged to show clicked cards id
+  // The card the user clicks before pushing the guess button
 }
 
 for (let image of images) {
@@ -162,19 +201,9 @@ for (let image of images) {
 }
 
 
-// USERGUESS
-const guessbutton = document.getElementById("guess");
-
 var images = document.querySelectorAll('img');
-gueessBtn = document.getElementById("guess");
-gueessBtn.addEventListener('click', function(){
 
-  if (gueessBtn = "clicked"){
-  images.forEach(function(image) {
-    image.addEventListener('click', imgPressed(image));
-});
-}
-})
+
 
 if (newGameButton, "click"){
 function renderBoardImages(Array){
@@ -198,14 +227,3 @@ function innerHtml(){
   document.getElementById("instructions").innerHTML = "You asked if " + radio.id + " is " + radio.value;
 }
 
-
-
-function guessPerson(userguess, hiddencard){
-    if (str(userguess) === str(hiddencard)){      // When clicked guess who the first card clicked after 
-      document.getElementById("guess").innerHTML ='Its Correct!';
-      }
-    else
-    {
-    document.getElementById("guess").innerHTML ='GAME OVER';
-    }
-}
