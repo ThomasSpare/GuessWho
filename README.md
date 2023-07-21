@@ -1,6 +1,6 @@
 # GUESS WHO GAME
 ---
-![Guess who game](https://github.com/ThomasSpare/GuessWho/blob/Guess-who-version-2/assets/images/screenshots/main2.png)
+![Guess who game](https://github.com/ThomasSpare/GuessWho/blob/Guess-who-version-2/assets/images/screenshots/guesswho.jpg)
 
 
 Guess who is a game I've often played with my kids.
