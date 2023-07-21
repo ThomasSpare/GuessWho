@@ -2,7 +2,7 @@
 ---
 ![Guess who game](https://github.com/ThomasSpare/GuessWho/blob/Guess-who-version-2/assets/images/screenshots/guesswho.jpg)
 
-
+Live Site: [Live version ](https://thomasspare.github.io/GuessWho/)
 Guess who is a game I've often played with my kids.
 It usually requires two players, but in this case the player
 is playing solo. From the outset I had a plan to make it a game
