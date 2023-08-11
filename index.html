@@ -14,83 +14,74 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Peralta&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <style media="screen">
-      
     </style>
 </head>
    <body>
-      <header>    
-         <h1>GUESS WHO</h1>      
-            <div class="play_game">   
+      <header>
+         <h1>GUESS WHO</h1>
+            <div class="play_game">
                <label for="myText">Enter a username to play...  </label>    <!-- Username input and new game button  -->
                <input type="text" id="myText">
                <button type="submit" id="newgamebtn" onclick="renderHiddenImage(), changeStyle(), renderBoardImages()">NEW GAME</button>
-         
             </div>
-               <div class="dialog_div">
-                  <h3 class="lets_play" id="letsplay"></h3>
-                  <h6 class="info" id="instructions"></h6>
-               </div>
-            </div>   
-            
-            </div> 
-         </header>     
-            <div class="parent">  
+         </header>
+         <div class="dialog_div">
+            <h3 class="lets_play" id="letsplay"></h3>
+            <h6 class="info" id="instructions"></h6>
+         </div> 
+            <div class="parent">
                <div class="child">
                   <div class="leftbox">
-                        <div class="first_row">                      <!---All Images first row -->
-                           <img class="slot" type="img" id="card30"/>
-                           <img class="slot" type="img" id="card29"/>
-                           <img class="slot" type="img" id="card28"/>
-                           <img class="slot" type="img" id="card27"/> 
-                           <img class="slot" type="img" id="card26"/>
-                           <img class="slot" type="img" id="card25"/>
-                           <img class="slot" type="img" id="card24"/>
-                           <img class="slot" type="img" id="card23"/>
-                           <img class="slot" type="img" id="card22"/>
-                           <img class="slot" type="img" id="card21"/>
+                        <div class="first_row">     <!---All Images first row -->
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card30">
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card29">
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card28">
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card27"> 
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card26">
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card25">
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card24">
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card23">
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card22">
+                           <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card21">
                         </div>
-                        
                         <div class="second_row">                         <!---All Images Second row -->
-                              <img class="slot" type="img" id="card20"/>
-                              <img class="slot" type="img" id="card19"/>
-                              <img class="slot" type="img" id="card18"/>
-                              <img class="slot" type="img" id="card17"/> 
-                              <img class="slot" type="img" id="card16"/>
-                              <img class="slot" type="img" id="card15"/>
-                              <img class="slot" type="img" id="card14"/>
-                              <img class="slot" type="img" id="card13"/>
-                              <img class="slot" type="img" id="card12"/>
-                              <img class="slot" type="img" id="card11"/>                            
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card20">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card19">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card18">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card17"> 
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card16">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card15">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card14">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card13">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card12">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card11">                            
                         </div>
                         <div class="third_row">                         <!---All Images third row -->
-                              <img class="slot" type="img" id="card10"/>
-                              <img class="slot" type="img" id="card9"/>
-                              <img class="slot" type="img" id="card8"/>
-                              <img class="slot" type="img" id="card7"/>
-                              <img class="slot" type="img" id="card6"/> 
-                              <img class="slot" type="img" id="card5"/>
-                              <img class="slot" type="img" id="card4"/>
-                              <img class="slot" type="img" id="card3"/>
-                              <img class="slot" type="img" id="card2"/>
-                              <img class="slot" type="img" id="card1"/>                           
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card10">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card9">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card8">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card7">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card6">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card5">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card4">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card3">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card2">
+                              <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card1">                        
                         </div>
                         <button type="submit" id="guess" onclick="guessPerson()"
                         value="submit">GUESS WHO !</button>  <!--Guess button, when clicked USER gets prompted to click on one of the boardcards -->
-                        <br><h2>To make a guess click on the one you think it is then hit Guess Who<br>You only have one chance</h2>
+                     <br><h2>To make a guess click on the one you think it is then hit Guess Who<br>You only have one chance</h2>
                         <h3 id="guess_who"></h3>
                   </div>
-                
                   <div id="user_question_form">
-                 
-                        
-                        <h2>QUESTIONS</h2> 
-                        <div> 
+                        <h2>QUESTIONS</h2>
+                        <div>
                         <button onclick="radioChecked()">ASK?</button>   <!-- Submit button & user Questions-->
                         </div>
-                        <div>                         
+                        <div>
                            <input class="btnSex" type="radio" id="sex" name="radio" value="woman">
                            <label for="woman">A Woman?</label><br>
-                           <input class="btnSex" type="radio" id="sex" name="radio" value="man">                    <!-- radio buttons for questions -->
+                           <input class="btnSex" type="radio" id="sex" name="radio" value="man">      <!-- radio buttons for questions -->
                            <label for="man">A Man?</label><br>
                            <input class="btnHair" type="radio" id="hair" name="radio" value="blond">
                            <label for="blond">Have blonde hair?</label><br>
@@ -125,29 +116,25 @@
                            <input class="btnBeard" type="radio" id="beard" name="radio" value="no">
                            <label for="beard">Have no beard?</label>
                         </div>
-                       
-                   
-                  </div>  
+                  </div>
                         <br>
                         <br>
                <div class="hiddencard_box">
-                  <img  id="slot1"/>          <!-- HiddenCard  -->
+                  <img  src="assets/images/graphics/Card-back.jpg" id="slot1"/>      <!-- HiddenCard  -->
                   <br>
                   <h6 class="hiddencard_info" id="hiddencard_info">START BY ASKING A QUESTION</h6>   <!--- JS info under hiddencard -->
-               </div> 
-                                                                                       
                </div>
-                         
-            </div>                   
+               </div>             
+            </div>
           <div class="lowdiv">
-            <img class="table" src="assets/images/graphics/table_surface.jpg" alt="table surface"> 
+            <img class="table" src="assets/images/graphics/table_surface.jpg" alt="table surface">
           </div>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
           crossorigin="anonymous">
          </script>
        <script>document.getElementById("letsplay").innerHTML = ""</script>
        <script>document.getElementById("guess_who").innerHTML = ""</script>
-       <script src="script.js"></script>  
+       <script src="script.js"></script>
     </body>
 </html>
