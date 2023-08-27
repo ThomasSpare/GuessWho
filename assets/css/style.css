@@ -191,7 +191,7 @@ button{
 #instructions{
         font-family: 'Peralta', cursive;
         font-size: medium;
-        margin-top: 50px;
+        margin-top: 25px;
 }
 
 .play_game {
@@ -202,9 +202,17 @@ button{
 .dialog_div{
         align-content: center;
         display: flex;
-        position: fixed;
-        height: 60px;
+        position: absolute;
+        height: 57px;
 }
+
+
+.lets_play_fade{
+        margin-top: 0;
+        height: 40px;
+        display: none;
+}
+
 .lets_play {
         margin-left: 20vw;
         display:inline-flex;
@@ -213,6 +221,7 @@ button{
 #letsplay {
         font-size: large;
         margin-top: 30px;
+        font-family: 'Peralta';
 }
 
 .info{ 

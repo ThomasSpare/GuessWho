@@ -19,7 +19,7 @@
        <body>
           <header>
              <h1>GUESS WHO</h1>
-                <div class="play_game">
+                <div class="play_game" id="play_game">
                    <label for="myText">Enter a username to play...  </label>    <!-- Username input and new game button  -->
                    <input type="text" id="myText">
                    <button type="submit" id="newgamebtn">NEW GAME</button>
@@ -68,15 +68,18 @@
                                   <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card2">
                                   <img class="slot" src="assets/images/graphics/Card-back.jpg" alt="boardcards" id="card1">                        
                             </div>
-                            <button type="submit" id="guess" onclick="guessPerson()"
+                            <button type="submit" id="guess"
                             value="submit">GUESS WHO !</button>  <!--Guess button, when clicked USER gets prompted to click on one of the boardcards -->
                          <br><h2>To make a guess click on the one you think it is then hit Guess Who<br>You only have one chance</h2>
                             <h3 id="guess_who"></h3>
+                            <div>
+                              <button id="resetBtn">Play Again ?</button>   <!-- Reset game -->
+                              </div>
                       </div>
                       <div id="user_question_form">
                             <h2>QUESTIONS</h2>
                             <div>
-                            <button onclick="radioChecked()">ASK?</button>   <!-- Submit button & user Questions-->
+                            <button id="askBtn">ASK?</button>   <!-- Submit button & user Questions-->
                             </div>
                             <div>
                                <input class="btnSex" type="radio" id="sex" name="radio" value="woman">
@@ -122,7 +125,7 @@
                    <div class="hiddencard_box">
                       <img  src="assets/images/graphics/Card-back.jpg" id="slot1"/>      <!-- HiddenCard  -->
                       <br>
-                      <h6 class="hiddencard_info" id="hiddencard_info">START BY ASKING A QUESTION</h6>   <!--- JS info under hiddencard -->
+                      <h6 class="hiddencard_info" id="hiddencard_info">HIDDEN CARD</h6>   <!--- JS info under hiddencard -->
                    </div>
                    </div>             
                 </div>
