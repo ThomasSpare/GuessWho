@@ -63,7 +63,6 @@ let radioChecked = (e) => {
       });
     }
   }
-  return radio.id, radio.value;
 };
 
 // FILTERFUNCTION with filters{ questionProp: questionVal }
@@ -112,26 +111,30 @@ function guessPerson() {
   }
 }
 
-// Returns the array ValuesWithoutImg as only ID numbers (eg. 3, 12, 29 )
+/* Returns the array ValuesWithoutImg as only ID numbers (eg. 3, 12, 29 )
+    If the selected radiobutton attribute matches the hiddencard attribute then
+    this function will stop the removing of more board cards and restore them all */
 function StripImg(fullPath) {
   var img_src = document.getElementById("slot1").src;
   img_src = "card" + getFilename(img_src);
   let ValueId = fullPath.replace(/^.*[\\\/]/, "");
   ValueId = removeExtension(ValueId);
+  let MyList = document.getElementById("card" + ValueId);
   if (("card" + ValueId + ".jpg").toString() === img_src.toString()) {
     document.getElementById("instructions").innerHTML =
       "The Hidden Card has this Attribute !";
-    MyList.classList.remove("fade");
-    MyList.classList.add("slot");
-    return img_src, ValueId;
-  }
-  // str "card" is added for each id passed and added to classList
+      for (var i = 1; i <= 29; ++i) {
+        let index = 31 - i;
+        let MyListFaded = document.getElementById("card" + index);
+        document.querySelectorAll
+        MyListFaded.classList = ("fade");
+        MyListFaded.classList.add("slot");
+  }}
   else {
     if (ValueId <= 30) {
-      const MyList = document.getElementById("card" + ValueId);
       MyList.classList.remove("slot");
       MyList.classList.add("fade");
-      return ValueId;
+      return ValueId, MyList;
     } else {
       // do nothing
     }
@@ -146,7 +149,7 @@ function resetCards() {
   document.getElementById("guess").innerHTML = "GUESS WHO !";
   for (var i = 1; i <= 29; ++i) {
     let index = 31 - i;
-    const MyList2 = document.getElementById("card" + index);
+    let MyList2 = document.getElementById("card" + index);
     MyList2.classList.remove("fade");
     MyList2.classList.add("slot");
   }
