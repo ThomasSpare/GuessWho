@@ -125,8 +125,6 @@ function StripImg(fullPath) {
       let MyList = document.getElementById("card" + ValueId);
       MyList.classList.remove("fade");
       MyList.classList.add("slot");
-
-      console.log(MyList);
       }}
     else {
     if (ValueId <= 30) {
