@@ -39,7 +39,7 @@ window.onload = function () {
 let radioChecked = (e) => {
   let radioButtons = document.getElementsByName("radio");
   for (let radio of radioButtons) {
-    if (radio.checked) {   
+    if (radio.checked) {
       var id = radio.id.toString().slice(0, -1);
       document.getElementById("instructions").innerHTML =
         "You asked if " +
@@ -124,9 +124,8 @@ function StripImg(fullPath) {
   if (("card" + ValueId + ".jpg").toString() === img_src.toString()) {
     document.getElementById("instructions").innerHTML =
       "The Hidden Card has this Attribute !";
-      MyList.forEach((element) => removeFade(element));     
-  }
-  else {
+    MyList.forEach((element) => removeFade(element));
+  } else {
     if (ValueId <= 30) {
       MyList.classList.remove("slot");
       MyList.classList.add("fade");
@@ -134,8 +133,8 @@ function StripImg(fullPath) {
     } else {
       // do nothing
     }
-  }}
-
+  }
+}
 
 // RESET GAME FUNCTION activated by Play Again Button
 function resetCards() {
@@ -159,10 +158,9 @@ function changeStyle() {
   document.body.appendChild(sheet);
 }
 
-// ----  Utils SMALL FUNCTIONS---------------
-//  Returns the img filename without the path
+// UTILS SMALLER FUNCTIONS
 
-function removeFade(MyList){
+function removeFade(MyList) {
   MyList.classList.remove("fade");
 }
 

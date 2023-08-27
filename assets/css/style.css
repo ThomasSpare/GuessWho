@@ -84,6 +84,10 @@ button{
 
 /* Divs and Slots */
 
+#user_question_form > div:nth-child(3){
+        padding: 10px;
+}
+
 .updiv{
         height: 0vw;
         align-items: center;
@@ -343,10 +347,25 @@ aside{
                       height: 87px;
 
                 }
+
+                #play_game{
+                        flex-wrap: wrap;
+                }
+
+                .parent{
+                        display: flex;
+                        position: relative;
+                        margin-top: 22vh;
+                        height: 60vh;
+                        width: 100vw;
+                }
                 body > div.parent > div{
+                        max-width: 100%;
                         height:max-content;
                         margin-top: 20%;
                         width: fit-content;
+                        display: flex;
+                        flex-wrap: wrap;
                 }
                 #user_question_form {
                         width: 154px;
@@ -358,13 +377,14 @@ aside{
                         font-size: medium;
                 }
                 #user_question_form {
-                        width: 150px;
+                        width: 374px;
                         display: flex;
                         flex-direction: column;
                         margin: 16px;
+                        font-size: x-large;
                     }
                 #letsplay {
-                        font-size: medium;
+                        font-size: larger;
                         margin-top: 30px;
                         margin-left: 18px;
                     }
@@ -381,7 +401,7 @@ aside{
                 }
                 #instructions {
                         font-family: 'Peralta', cursive;
-                        font-size: small;
+                        font-size: large;
                         margin-top: 59px;
                         margin-right: 131px;
                     
