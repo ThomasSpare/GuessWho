@@ -114,6 +114,14 @@ The live link can be found here -
 
 ## Testing
 
+When running the code in validator.w3.org I receive warnings that these headings are empty.
+These headings are used to inject messages using innerHTML form Javascript and they should
+not contain anything from the start.
+
+![HTML Validator](assets/images/screenshots/validatorHTML.png)
+
+After adding some dots for each heading I have a valid HTML site.
+![HTML Validator 2](assets/images/screenshots/validatorHTML2.png)
 
 
 ## The filterPeople function
