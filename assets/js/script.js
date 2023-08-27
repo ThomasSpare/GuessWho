@@ -111,9 +111,10 @@ function guessPerson() {
   }
 }
 
-/* Returns the array ValuesWithoutImg as only ID numbers (eg. 3, 12, 29 )
-    If the selected radiobutton attribute matches the hiddencard attribute then
-    this function will stop the removing of more board cards and restore them all */
+/*  CHECKS IF RADIOBUTTON QUESTION MATCHES ATTRIBUTE OF HIDDEN CARD
+    Each remaining board card pass here and is faded if it does not have the attribute of the hiddencard
+    If the selected radiobutton attribute match the hiddencard attribute then
+    this function will stop the removing of more board cards and restore them to unfaded */
 function StripImg(fullPath) {
   var img_src = document.getElementById("slot1").src;
   img_src = "card" + getFilename(img_src);
@@ -123,13 +124,8 @@ function StripImg(fullPath) {
   if (("card" + ValueId + ".jpg").toString() === img_src.toString()) {
     document.getElementById("instructions").innerHTML =
       "The Hidden Card has this Attribute !";
-      for (var i = 1; i <= 29; ++i) {
-        let index = 31 - i;
-        let MyListFaded = document.getElementById("card" + index);
-        document.querySelectorAll
-        MyListFaded.classList = ("fade");
-        MyListFaded.classList.add("slot");
-  }}
+      MyList.forEach((element) => removeFade(element));     
+  }
   else {
     if (ValueId <= 30) {
       MyList.classList.remove("slot");
@@ -138,8 +134,8 @@ function StripImg(fullPath) {
     } else {
       // do nothing
     }
-  }
-}
+  }}
+
 
 // RESET GAME FUNCTION activated by Play Again Button
 function resetCards() {
@@ -165,6 +161,10 @@ function changeStyle() {
 
 // ----  Utils SMALL FUNCTIONS---------------
 //  Returns the img filename without the path
+
+function removeFade(MyList){
+  MyList.classList.remove("fade");
+}
 
 function fadeDiv() {
   const playList = document.getElementById("play_game");

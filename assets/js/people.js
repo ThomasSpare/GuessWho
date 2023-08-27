@@ -63,7 +63,7 @@ export const people = [
     },
     {
       hair: "red",
-      hairtype: "long",
+      hairtype: "short",
       sex: "woman",
       mood: "happy",
       glasses: "no",
@@ -123,7 +123,7 @@ export const people = [
     },
     {
       hair: "blond",
-      hairtype: "long",
+      hairtype: "short",
       sex: "woman",
       mood: "happy",
       glasses: "no",
@@ -166,8 +166,8 @@ export const people = [
       hairtype: "short",
       sex: "man",
       mood: "neutral",
-      glasses: "no",
-      age: "no",
+      glasses: "yes",
+      age: "yes",
       beard: "no",
       img: "assets/images/characters/17.jpg",
     },

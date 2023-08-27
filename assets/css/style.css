@@ -51,7 +51,9 @@ body > div.parent > div > div.leftbox > h2{
         font-weight: lighter;
 }
 
-#guess{                        /* guess button */
+/* Buttons */
+
+#guess{
         margin-left: 20%; 
         background-color: rgb(209, 77, 105);
         width: 200px;
@@ -59,7 +61,7 @@ body > div.parent > div > div.leftbox > h2{
         margin-left: 40%;
         
 }
-/* Buttons */
+
 button{
         font-family: 'Peralta', cursive;
         text-align: center;
@@ -70,20 +72,17 @@ button{
         background-color: hwb(51 0% 9%);
 }
 
+#resetBtn{
+        margin-left: 20vw;
+}
+
 #newgamebtn{
         width: 150px;
         height: 40px;
         z-index: 999;
 }
 
-
-#ask::after{
-        content:attr(data--value);
-}  
-                               /* Pseudo selector for JS -- input[type="radio"]:checked  */
-.radiobtn::after{
-        content: attr(data--value);           /* selector for kind of btn */
-}
+/* Divs and Slots */
 
 .updiv{
         height: 0vw;
@@ -94,8 +93,6 @@ button{
         height: 330px;
         margin-bottom:  20px;
 }
-
-
 
 .play_game{
         display:flex; 
@@ -181,7 +178,7 @@ button{
 
 
 
-/*------------------------------------------------Header & dialog */
+/* Header & dialog */
 
 #mytext {height: 20px;
         padding: 0px;
@@ -232,7 +229,7 @@ button{
         margin-left: 18px;
 }
 
-/*------------------------------------------------ questions & hiddencard box */
+/* Questions & Hidden Card */
 
 
 .user_question_form{
