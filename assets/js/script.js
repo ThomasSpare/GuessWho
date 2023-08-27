@@ -42,11 +42,7 @@ let radioChecked = (e) => {
     if (radio.checked) {
       var id = radio.id.toString().slice(0, -1);
       document.getElementById("instructions").innerHTML =
-        "You asked if " +
-        id +
-        " is " +
-        radio.value +
-        "<br>The hidden Person does not have this Attribute";
+        "The Hidden Person does NOT have " + id + " " + radio.value;
       let questionProp = id;
       let questionVal = radio.value;
       const filteredPeople = filterPeople(people, {

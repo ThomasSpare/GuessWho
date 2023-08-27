@@ -22,7 +22,7 @@ body{
         border-style:ridge;
         border-radius: 10%;
         filter: drop-shadow(2px 4px 6px black);
-        opacity: 50;
+        opacity: 0;
         -webkit-transition: opacity 0.15s linear;
         -o-transition: opacity 0.15s linear;
         transition: opacity 0.15s linear;
@@ -121,7 +121,7 @@ button{
         border-style:ridge;
         border-radius: 30px;
         width: 70%;
-        height: 60vh;
+        height: fit-content;
         margin-top: 0vh;
         margin-left:10vw;
         background-color: hwb(51 0% 9%);
@@ -133,15 +133,15 @@ button{
 }
 
 .first_row{ 
-        background-color:  rgb(247, 113, 72);
+        background-color: hwb(51 0% 9%);
 }
 
 .second_row{ 
-        background-color: rgb(247, 113, 72);
+        background-color: hwb(51 0% 9%);
 }
 
 .third_row{ 
-        background-color: rgb(247, 113, 72);
+        background-color: hwb(51 0% 9%);
 }
 
 #slot1{ 
@@ -277,9 +277,9 @@ aside{
         height: 360px;
 }
 
-.cpu_question{height: 20px;
-                width: vw;
-                background-color: blueviolet;
+.cpu_question{
+        height: 20px;
+        background-color: blueviolet;
 }
 
         @media screen and (max-width: 1024px){
@@ -318,6 +318,9 @@ aside{
                         margin-top: 20%;
                         margin-left: 2%;
                         
+                }
+                .child{
+                        flex-wrap: wrap;
                 }
                 .hiddencard_box {
                         display: flex;

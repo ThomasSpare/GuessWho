@@ -124,6 +124,7 @@ After adding some dots for each heading I have a valid HTML site.
 ![HTML Validator 2](assets/images/screenshots/validatorHTML2.png)
 
 
+
 ## The filterPeople function
 
 I have in code comments left reference to functions I have learned from youtube and other sources. My mentor Brian O'hare, who I 
