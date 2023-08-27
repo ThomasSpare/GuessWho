@@ -120,8 +120,15 @@ function StripImg(fullPath) {
   if (("card" + ValueId + ".jpg").toString() === img_src.toString()) {
     document.getElementById("instructions").innerHTML =
       "The Hidden Card has this Attribute !";
-    MyList.forEach((element) => removeFade(element));
-  } else {
+      for (var i = 1; i <= 29; ++i) {
+        let ValueId = 31 - i;
+      let MyList = document.getElementById("card" + ValueId);
+      MyList.classList.remove("fade");
+      MyList.classList.add("slot");
+
+      console.log(MyList);
+      }}
+    else {
     if (ValueId <= 30) {
       MyList.classList.remove("slot");
       MyList.classList.add("fade");
@@ -157,7 +164,8 @@ function changeStyle() {
 // UTILS SMALLER FUNCTIONS
 
 function removeFade(MyList) {
-  MyList.classList.remove("fade");
+  MyList.classList.toggle("slot");
+  MyList.classList.toggle("fade");
 }
 
 function fadeDiv() {

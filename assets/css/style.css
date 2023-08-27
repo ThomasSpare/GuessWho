@@ -409,4 +409,12 @@ aside{
                         margin-right: 131px;
                     
                     }
-}
+        @media screen and (max-width: 375px){
+                #newgamebtn{
+                    height: 47px;
+                }
+
+                .parent{
+                        margin-top: 26vh;
+                }
+}}

@@ -32,7 +32,7 @@ export const people = [
       img: "assets/images/characters/3.jpg",
     },
     {
-      hair: "red",
+      hair: "brown",
       hairtype: "long",
       sex: "woman",
       mood: "neutral",

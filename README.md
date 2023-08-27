@@ -13,7 +13,12 @@ So the idea is that the player is going to ask questions about a hidden card
 that is turned upside down over the board game. This hidden person is also 
 a person on the players own game board. After each question about features
 of the hidden card, the board cards that have these features is removed,
-narrowing down the possible candidates.
+narrowing down the possible candidates. But they can be turned up again
+if the player asks a correct attribute of the hidden card. So it becomes a 
+guess who game with a twist so that cards that the player have ruled out can suddenly
+be turned up again and the player has to remember what questions where asked before.
+So instead of narrowing down the cards with less to choose from the player has to keep
+track of the the features of the hidden card. 
 
 For instance the player can ask, with radiobuttons, if the person is a 'man' - the hidden
 person is a 'man' so all the woman on the player board is removed and the player is informed 
@@ -23,16 +28,14 @@ has this attribute the player is informed that it does.
 ![ask question2](assets/images/screenshots/ask_question2.png)
 ![ask question1](assets/images/screenshots/ask_question1.png)
 
-Left is a smaller pile of cards, the player can at anytime guess by hitting the guess button and point on 
-one of the cards showing people. The player has one guess, then its game over.
+Each time the player guess an attribute the hidden card does not have
+the pile of board cards get smaller and smaller, the player can at anytime 
+guess by hitting the guess button and point on one of the cards showing people.
+The player has one guess, then its game over.
 
 ---
 ## Game Functionality 
 
-Unfortunatly I did´nt get the game to function properly in time for submission.
-The amount to learn about manipulating arrays and different methods and new functions to display
-images etc across the DOM took alot of time. I almost pulled it together and with a couple of days
-I could make it run as planned.
 
 ---
 
@@ -98,11 +101,6 @@ solution: Remove form tags
 - button has type="submit"
 - solution: remove type="submit"
 
-### Unfixed Bugs
-- The quess button dont work. When pressed the button should compare a user click on a crad to the hiddecard
-  if its the same card user wins, if not the user is game over.
-- The ask function should compare the asked for traits to the hiddencard traits and inform the user
-  if the hidden card has the asked for traits.
 
 ### Deploying the website to GitHub Pages:
 The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -114,14 +112,20 @@ The live link can be found here -
 
 ## Testing
 
-When running the code in validator.w3.org I receive warnings that these headings are empty.
-These headings are used to inject messages using innerHTML form Javascript and they should
-not contain anything from the start.
+When running the code in validator.w3.org I received warnings that certain headings was empty.
+These headings are used to inject messages using innerHTML from Javascript and they should
+not contain any text from the start.
 
-![HTML Validator](assets/images/screenshots/validatorHTML.png)
+![HTML Validator](assets/images/screenshots/testing/validatorHTML.png)
 
-After adding some dots for each heading I have a valid HTML site.
-![HTML Validator 2](assets/images/screenshots/validatorHTML2.png)
+After adding some dots for each heading no errors where found in the HTML.
+![HTML Validator 2](assets/images/screenshots/testing/validatorHTML2.png)
+
+I also did a Jigsaw test and received only errors from the bootstrap css.
+![Jigsaw Validator](assets/images/screenshots/testing/Jigsaw_test.png)
+
+Following up to test with Lighthouse gave these results
+![Jigsaw Validator](assets/images/screenshots/testing/lighthouse.png)
 
 
 
