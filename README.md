@@ -1,22 +1,29 @@
-# GUESS WHO GAME
+# GUESS WHO GAME ![Guess who game](assets/images/graphics/guesswho.png)
 ---
-![Guess who game](assets/images/screenshots/main.png)
+![Guess who game](assets/images/screenshots/main_responsive.png)
 
 
 Guess who is a game I've often played with my kids.
 It usually requires two players, but in this case the player
 is playing solo. From the outset I had a plan to make it a game
-against the computer, but it turned out to be very complicated.
+against the computer taking turns to guess as in a real guess who game.
+But for the scope of this project a solo game is sufficient.
 
 So the idea is that the player is going to ask questions about a hidden card
 that is turned upside down over the board game. This hidden person is also 
 a person on the players own game board. After each question about features
-of the hidden person card, the players card with these choosen features get turned,
-narrowing down the possible suspects.
+of the hidden card, the board cards that have these features is removed,
+narrowing down the possible candidates.
 
 For instance the player can ask, with radiobuttons, if the person is a 'man' - the hidden
-person is a 'man' so all the woman on the player board get turned. Left is a smaller
-pile of cards, the player can at anytime guess by hitting the guess button and point on 
+person is a 'man' so all the woman on the player board is removed and the player is informed 
+about the current question and that the hidden card does not have this attribute. If the hidden card
+has this attribute the player is informed that it does.
+
+![ask question2](assets/images/screenshots/ask_question2.png)
+![ask question1](assets/images/screenshots/ask_question1.png)
+
+Left is a smaller pile of cards, the player can at anytime guess by hitting the guess button and point on 
 one of the cards showing people. The player has one guess, then its game over.
 
 ---
@@ -106,10 +113,8 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 The live link can be found here -
 
 ## Testing
-I have tried functions and code snippets in javatutor and various other code testers.
-I have for each step or new function used google dev tools and console.logs to see if the code passed and tried to find
-the reason and fix them. I also in the end tried using the vs code editors debugging function to see the bug better but could not make it work.
-No performed W3c Validator test or lighthouse testing yet since I dont have a fully functional game yet.
+
+
 
 ## The filterPeople function
 
