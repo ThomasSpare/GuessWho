@@ -17,13 +17,14 @@ window.onload = function () {
       document.getElementById("letsplay").innerHTML =
         "Lets play " + userName + " !";
       document.getElementById("instructions").innerHTML =
-        "The goal of the game is to guess who the person is behind the hidden card.<br>You only have One guess. Choose a question and hit ASK to get more clues";
+        "The goal of the game is to guess the person behind the hidden card.<br>Ask questions about the hidden person and Remember what questions you have asked.<br>When you are ready to guess click on a card then the Guess button. You only have One guess.";
       document.getElementById("newgamebtn").innerHTML = "Click to start !";
       newGameButton.addEventListener("click", renderHiddenImage);
       newGameButton.addEventListener("click", renderBoardImages);
       newGameButton.addEventListener("click", changeStyle);
       resetBtn.addEventListener("click", resetCards);
       askBtn.addEventListener("click", radioChecked);
+      askBtn.addEventListener("click", countMoves);
       guessBtn.addEventListener("click", guessPerson);
       return userName;
     }
@@ -89,12 +90,14 @@ var userguess = userguess;
 /* GUESS FUNCTION The player first clicks on the person he/she thinks it is
     Then clicks the button to confirm if the guess is correct
     The result win or lose is declared and the hiddencard is displayed to the user */
+
 function guessPerson() {
   document.getElementById("guess").innerHTML = "Click on who you think it is";
   var img_src = document.getElementById("slot1").src;
   img_src = "card" + getFilename(img_src);
   if (userguess.toString() === img_src.toString()) {
     document.getElementById("guess").innerHTML = "Its correct ! You win !";
+    document.getElementById("instructions").innerHTML = "You Guessed the Right Who in " + count + " moves !!";
     var sheet = document.createElement("style");
     sheet.innerHTML = "#slot1{filter: brightness(100%);}";
     document.body.appendChild(sheet);
@@ -108,9 +111,10 @@ function guessPerson() {
 }
 
 /*  CHECKS IF RADIOBUTTON QUESTION MATCHES ATTRIBUTE OF HIDDEN CARD
-    Each remaining board card pass here and is faded if it does not have the attribute of the hiddencard
+    Each remaining board card pass here and is faded if it does not have the attribute of the question
     If the selected radiobutton attribute match the hiddencard attribute then
     this function will stop the removing of more board cards and restore them to unfaded */
+
 function StripImg(fullPath) {
   var img_src = document.getElementById("slot1").src;
   img_src = "card" + getFilename(img_src);
@@ -142,6 +146,8 @@ function resetCards() {
   document.getElementById("instructions").innerHTML = "Lets Play a New game !";
   renderHiddenImage();
   changeStyle();
+  count = 0;
+  document.getElementById("count").innerHTML = count;
   document.getElementById("guess").innerHTML = "GUESS WHO !";
   for (var i = 1; i <= 29; ++i) {
     let index = 31 - i;
@@ -149,6 +155,7 @@ function resetCards() {
     MyList2.classList.remove("fade");
     MyList2.classList.add("slot");
   }
+  return count;
 }
 
 // Makes hidden card blacked out when pushing new game button
@@ -160,11 +167,6 @@ function changeStyle() {
 }
 
 // UTILS SMALLER FUNCTIONS
-
-function removeFade(MyList) {
-  MyList.classList.toggle("slot");
-  MyList.classList.toggle("fade");
-}
 
 function fadeDiv() {
   const playList = document.getElementById("play_game");
@@ -178,6 +180,15 @@ function getFilename(fullPath) {
 
 function removeExtension(filename) {
   return filename.substring(0, filename.lastIndexOf(".")) || filename;
+}
+
+/* Counter for every time a player ask a question 
+    Resets to 0 with resetCard() */
+let count = 0;
+
+function countMoves(){
+  count = count + 1;
+  document.getElementById("count").innerHTML = count;
 }
 
 /* USERGUESS AND HIDDENCARD FUNCTIONS

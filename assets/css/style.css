@@ -122,8 +122,8 @@ button{
         border-radius: 30px;
         width: 70%;
         height: fit-content;
-        margin-top: 0vh;
-        margin-left:10vw;
+        margin-top: 9vh;
+        margin-left: 10vw;
         background-color: hwb(51 0% 9%);
         padding-right: 50px;
 }
@@ -191,8 +191,8 @@ button{
 
 #instructions{
         font-family: 'Peralta', cursive;
-        font-size: medium;
-        margin-top: 25px;
+        font-size: large;
+        margin-top: 30px;
 }
 
 .play_game {
@@ -231,6 +231,12 @@ button{
         display: inline-flex;
         margin-top: 14px;
         margin-left: 18px;
+}
+
+#count{
+        font-size: 4rem;
+        font-family: 'Peralta';
+        margin-left: 2rem;
 }
 
 /* Questions & Hidden Card */
