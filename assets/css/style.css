@@ -410,9 +410,9 @@ aside{
                 }
                 #instructions {
                         font-family: 'Peralta', cursive;
-                        font-size: large;
+                        font-size: medium;
                         margin-top: 59px;
-                        margin-right: 131px;
+                        margin-right: 28px;
                     
                     }
         @media screen and (max-width: 375px){

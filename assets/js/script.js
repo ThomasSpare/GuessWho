@@ -7,8 +7,6 @@ window.onload = function () {
   const guessBtn = document.getElementById("guess");
   const resetBtn = document.getElementById("resetBtn");
 
-  let someString = "Username";
-
   newGameButton.addEventListener("click", function () {
     var userName = document.getElementById("myText").value;
     if (userName === "") {
@@ -97,7 +95,7 @@ function guessPerson() {
   img_src = "card" + getFilename(img_src);
   if (userguess.toString() === img_src.toString()) {
     document.getElementById("guess").innerHTML = "Its correct ! You win !";
-    document.getElementById("instructions").innerHTML = "You Guessed the Right Who in " + count + " moves !!";
+    document.getElementById("instructions").innerHTML = "You Won in " + count + " moves !!";
     var sheet = document.createElement("style");
     sheet.innerHTML = "#slot1{filter: brightness(100%);}";
     document.body.appendChild(sheet);
@@ -160,7 +158,6 @@ function resetCards() {
 
 // Makes hidden card blacked out when pushing new game button
 function changeStyle() {
-  const element = document.querySelector("slot1");
   var sheet = document.createElement("style");
   sheet.innerHTML = "#slot1{filter: brightness(0%);}";
   document.body.appendChild(sheet);
