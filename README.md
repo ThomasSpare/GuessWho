@@ -3,7 +3,7 @@
 ---
 
 ![Guess who game](assets/images/screenshots/main_responsive2.png)
-
+<br>
 [Live Site](https://thomasspare.github.io/GuessWho/)
 
 # About
