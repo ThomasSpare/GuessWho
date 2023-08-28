@@ -3,6 +3,7 @@
 ---
 
 ![Guess who game](assets/images/screenshots/main_responsive2.png)
+[Live Site](https://thomasspare.github.io/GuessWho/)
 
 # About
 ---
@@ -126,7 +127,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 - Select the projects Main branch from the drop-down menu under Branch
 - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here - 
+The live link can be found here - [Live Site](https://thomasspare.github.io/GuessWho/)
 
 ### Cloning the repository
 1. Visit the GitHub page of the website’s repository
